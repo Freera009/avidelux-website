@@ -1,0 +1,344 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowRight, Users, Globe, Car, Award, Calculator, MapPin, Calendar, Clock, CheckCircle, MapPinned } from "lucide-react";
+import Navbar from "@/components/avidelux/Navbar";
+import Footer from "@/components/avidelux/Footer";
+import SectionReveal from "@/components/avidelux/SectionReveal";
+import PageTransition from "@/components/avidelux/PageTransition";
+
+const COASTAL = "/images/df3b79dfd_generated_d50a62bb.png";
+
+const vehicleClasses = [
+  { name: "Business Class", basePrice: 85, perKm: 2.4 },
+  { name: "First Class", basePrice: 145, perKm: 3.8 },
+  { name: "Premium SUV", basePrice: 120, perKm: 3.2 },
+  { name: "Executive Van", basePrice: 165, perKm: 4.1 },
+];
+
+const metrics = [
+  { value: "52K+", label: "Active Users", icon: Users },
+  { value: "2M+", label: "Kilometers Covered", icon: Globe },
+  { value: "200+", label: "Global Markets", icon: MapPin },
+  { value: "4.97", label: "Average Rating", icon: Award },
+];
+
+const services = [
+  {
+    title: "Airport Transfers",
+    desc: "Flight-tracked arrivals, meet-and-greet at the terminal, and seamless luggage assistance. Your chauffeur adjusts to delays automatically.",
+    icon: Car,
+  },
+  {
+    title: "Corporate Accounts",
+    desc: "Centralized billing, travel policy enforcement, multi-city management, and CSRD-compliant carbon reporting in one enterprise dashboard.",
+    icon: Calculator,
+  },
+  {
+    title: "Event Transport",
+    desc: "Coordinate luxury ground travel for conferences, galas, and board meetings with dedicated fleet allocation and on-site coordination.",
+    icon: Calendar,
+  },
+  {
+    title: "Hourly Chauffeur",
+    desc: "Book a dedicated chauffeur by the hour for multi-stop business days, client tours, or city explorations with full flexibility.",
+    icon: Clock,
+  },
+];
+
+export default function Services() {
+  const [selectedClass, setSelectedClass] = useState(0);
+  const [distance, setDistance] = useState(25);
+  const [showSummary, setShowSummary] = useState(false);
+  const [bookingConfirmed, setBookingConfirmed] = useState(false);
+  const [pickup, setPickup] = useState("");
+  const [dropoff, setDropoff] = useState("");
+  const [rideTime, setRideTime] = useState("now");
+
+  const selected = vehicleClasses[selectedClass];
+  const estimated = selected.basePrice + selected.perKm * distance;
+
+  return (
+    <PageTransition>
+      <Navbar />
+
+      {/* Hero + Calculator */}
+      <section className="pt-32 pb-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <SectionReveal>
+                <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-6">
+                  Our Services
+                </p>
+              </SectionReveal>
+              <SectionReveal delay={0.1}>
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08]">
+                  Intelligent chauffeur, redefined service
+                </h1>
+              </SectionReveal>
+              <SectionReveal delay={0.2}>
+                <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-md">
+                  From airport transfers to corporate fleet management—every journey is dispatched by autonomous AI nodes for unmatched precision and luxury.
+                </p>
+              </SectionReveal>
+              <SectionReveal delay={0.3}>
+                <p className="font-body text-sm text-bronze mt-4">
+                  Zero-Emission Scope 3 Carbon Reporting Included
+                </p>
+              </SectionReveal>
+            </div>
+
+            {/* Pricing Calculator */}
+            <SectionReveal delay={0.2}>
+              <div className="bg-cream p-8 lg:p-10 rounded-sm">
+                <div className="flex items-center gap-2 mb-6">
+                  <Calculator size={20} className="text-bronze" />
+                  <h3 className="font-heading text-lg font-semibold text-cacao">
+                    Ride Estimator
+                  </h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <label className="font-body text-xs tracking-widest uppercase text-cacao/40 mb-3 block">
+                      Vehicle Class
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {vehicleClasses.map((vc, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setSelectedClass(i)}
+                          className={`py-3 px-4 font-body text-xs font-medium rounded-sm luxury-transition ${
+                            selectedClass === i
+                              ? "bg-cacao text-ivory"
+                              : "bg-ivory text-cacao/60 hover:text-cacao border border-cacao/10"
+                          }`}
+                        >
+                          {vc.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="font-body text-xs tracking-widest uppercase text-cacao/40 mb-3 block">
+                      Estimated Distance: {distance} km
+                    </label>
+                    <input
+                      type="range"
+                      min="5"
+                      max="150"
+                      value={distance}
+                      onChange={(e) => setDistance(Number(e.target.value))}
+                      className="w-full accent-cacao"
+                    />
+                    <div className="flex justify-between font-body text-xs text-cacao/30 mt-1">
+                      <span>5 km</span>
+                      <span>150 km</span>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-cacao/10 pt-6">
+                    <div className="flex items-end justify-between">
+                      <div>
+                        <p className="font-body text-xs text-cacao/40">Estimated fare</p>
+                        <p className="font-heading text-4xl font-bold text-cacao mt-1">
+                          €{estimated.toFixed(0)}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <p className="font-body text-xs text-cacao/40">Base: €{selected.basePrice}</p>
+                        <p className="font-body text-xs text-cacao/40">Per km: €{selected.perKm.toFixed(1)}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={() => setShowSummary(true)}
+                    className="w-full bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2"
+                  >
+                    Book This Ride
+                    <ArrowRight size={16} />
+                  </button>
+                </div>
+              </div>
+            </SectionReveal>
+
+            {showSummary && (
+              <SectionReveal>
+                <div className="bg-cream p-8 lg:p-10 rounded-sm mt-6">
+                  {bookingConfirmed ? (
+                    <div className="text-center py-8">
+                      <CheckCircle size={40} className="text-bronze mx-auto mb-4" />
+                      <h3 className="font-heading text-2xl font-semibold text-cacao mb-2">Chauffeur Requested</h3>
+                      <p className="font-body text-sm text-cacao/50 max-w-sm mx-auto">Your ride has been dispatched via our AI nodes. You'll receive confirmation and driver details shortly.</p>
+                      <button onClick={() => { setShowSummary(false); setBookingConfirmed(false); setPickup(""); setDropoff(""); }} className="mt-6 font-body text-sm text-bronze hover:text-cacao luxury-transition">Book another ride</button>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="flex items-center gap-2 mb-6">
+                        <MapPinned size={20} className="text-bronze" />
+                        <h3 className="font-heading text-lg font-semibold text-cacao">Confirm Your Journey</h3>
+                      </div>
+                      <div className="grid grid-cols-2 gap-6 mb-6 pb-6 border-b border-cacao/10">
+                        <div>
+                          <p className="font-body text-xs text-cacao/40 mb-1">Vehicle Class</p>
+                          <p className="font-body text-sm font-medium text-cacao">{selected.name}</p>
+                        </div>
+                        <div>
+                          <p className="font-body text-xs text-cacao/40 mb-1">Distance</p>
+                          <p className="font-body text-sm font-medium text-cacao">{distance} km</p>
+                        </div>
+                        <div>
+                          <p className="font-body text-xs text-cacao/40 mb-1">Estimated Fare</p>
+                          <p className="font-heading text-xl font-bold text-cacao">€{estimated.toFixed(0)}</p>
+                        </div>
+                        <div>
+                          <p className="font-body text-xs text-cacao/40 mb-1">Carbon Impact</p>
+                          <p className="font-body text-sm font-medium text-bronze">0g CO₂ (Zero-emission)</p>
+                        </div>
+                      </div>
+                      <div className="space-y-4 mb-6">
+                        <input type="text" placeholder="Pickup location" value={pickup} onChange={(e) => setPickup(e.target.value)} className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition" />
+                        <input type="text" placeholder="Drop-off destination" value={dropoff} onChange={(e) => setDropoff(e.target.value)} className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition" />
+                        <select value={rideTime} onChange={(e) => setRideTime(e.target.value)} className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao focus:outline-none focus:border-bronze luxury-transition">
+                          <option value="now">Dispatch now (60s rapid)</option>
+                          <option value="1h">In 1 hour</option>
+                          <option value="3h">In 3 hours</option>
+                          <option value="tomorrow">Tomorrow morning</option>
+                          <option value="custom">Custom schedule</option>
+                        </select>
+                      </div>
+                      <div className="flex gap-3">
+                        <button onClick={() => setBookingConfirmed(true)} className="flex-1 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2">
+                          Confirm & Request Chauffeur
+                          <ArrowRight size={16} />
+                        </button>
+                        <button onClick={() => setShowSummary(false)} className="px-6 border border-cacao/15 text-cacao py-4 font-body text-sm hover:bg-ivory luxury-transition rounded-sm">
+                          Edit
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </SectionReveal>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-24 lg:py-36">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <SectionReveal>
+            <div className="mb-16">
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">
+                What We Offer
+              </p>
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-cacao leading-tight max-w-lg">
+                Comprehensive luxury mobility
+              </h2>
+            </div>
+          </SectionReveal>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+            {services.map((svc, i) => (
+              <SectionReveal key={i} delay={i * 0.08}>
+                <div className="group p-8 lg:p-10 border border-cacao/10 rounded-sm hover:bg-cream luxury-transition luxury-card">
+                  <svc.icon size={28} className="text-bronze mb-6" />
+                  <h3 className="font-heading text-xl font-semibold text-cacao mb-3">
+                    {svc.title}
+                  </h3>
+                  <p className="font-body text-sm text-cacao/50 leading-relaxed">
+                    {svc.desc}
+                  </p>
+                </div>
+              </SectionReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Break */}
+      <SectionReveal>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="rounded-sm overflow-hidden">
+            <img
+              src={COASTAL}
+              alt="Luxury sedan on scenic highway at sunset"
+              className="w-full h-[40vh] lg:h-[55vh] object-cover"
+            />
+          </div>
+        </div>
+      </SectionReveal>
+
+      {/* Social Proof */}
+      <section className="py-24 lg:py-36">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <SectionReveal>
+            <div className="text-center mb-16">
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">
+                Our Impact
+              </p>
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-cacao leading-tight max-w-xl mx-auto">
+                Trusted by business leaders
+              </h2>
+            </div>
+          </SectionReveal>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {metrics.map((m, i) => (
+              <SectionReveal key={i} delay={i * 0.1}>
+                <div className="text-center p-6 bg-cream rounded-sm">
+                  <m.icon size={24} className="text-bronze mx-auto mb-4" />
+                  <span className="font-heading text-4xl md:text-5xl font-bold text-cacao block">
+                    {m.value}
+                  </span>
+                  <span className="font-body text-sm text-cacao/50 mt-2 block">
+                    {m.label}
+                  </span>
+                </div>
+              </SectionReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-cacao py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+          <SectionReveal>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-ivory leading-tight max-w-xl mx-auto">
+              Ready to experience luxury mobility?
+            </h2>
+          </SectionReveal>
+          <SectionReveal delay={0.1}>
+            <p className="font-body text-base text-ivory/50 mt-6 max-w-md mx-auto leading-relaxed">
+              Join 52,000+ professionals who trust AviDelux for their ground travel needs.
+            </p>
+          </SectionReveal>
+          <SectionReveal delay={0.2}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+              <Link
+                to="/fleet"
+                className="inline-flex items-center gap-2 bg-bronze text-ivory px-8 py-4 font-body text-sm font-medium tracking-wide hover:bg-bronze/80 luxury-transition rounded-sm"
+              >
+                Explore Our Fleet
+                <ArrowRight size={16} />
+              </Link>
+              <Link
+                to="/corporate"
+                className="inline-flex items-center gap-2 border border-ivory/20 text-ivory px-8 py-4 font-body text-sm font-medium tracking-wide hover:border-ivory/40 luxury-transition rounded-sm"
+              >
+                Corporate Solutions
+              </Link>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
+      <Footer />
+    </PageTransition>
+  );
+}
