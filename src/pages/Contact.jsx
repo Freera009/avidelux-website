@@ -8,8 +8,8 @@ import PageTransition from "@/components/avidelux/PageTransition";
 const RECEPTION_IMG = "/images/c278dd8e7_generated_image.png";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "concierge@avidelux.com", href: "mailto:concierge@avidelux.com" },
-  { icon: Phone, label: "Phone", value: "+44 207 123 4567", href: "tel:+442071234567" },
+  { icon: Mail, label: "Email", value: "info@avidelux.com", href: "mailto:info@avidelux.com" },
+  { icon: Phone, label: "Phone", value: "+49 152 2400 1111", href: "tel:+4915224001111" },
   { icon: MapPin, label: "Office", value: "12 Berkeley Square, Mayfair, London W1J 6BR", href: null },
   { icon: Clock, label: "Hours", value: "24/7 Global Concierge", href: null },
 ];

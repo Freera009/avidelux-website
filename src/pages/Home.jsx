@@ -235,7 +235,7 @@ export default function Home() {
               Tap to book instantly via our WhatsApp AI Agent. Your personal concierge is ready.
             </p>
             <a
-              href="https://wa.me/"
+              href="https://wa.me/4915224001111"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 mt-3 font-body text-xs text-bronze hover:text-ivory luxury-transition"

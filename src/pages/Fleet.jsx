@@ -195,9 +195,9 @@ export default function Fleet() {
                 </div>
 
                 <div className="flex items-center gap-6 mt-8 pt-6 border-t border-cacao/10">
-                  <a href="tel:+442071234567" className="flex items-center gap-2 font-body text-xs text-cacao/40 hover:text-bronze luxury-transition">
+                  <a href="tel:+4915224001111" className="flex items-center gap-2 font-body text-xs text-cacao/40 hover:text-bronze luxury-transition">
                     <Phone size={14} />
-                    +44 207 123 4567
+                    +49 152 2400 1111
                   </a>
                   <a href="mailto:corporate@avidelux.com" className="flex items-center gap-2 font-body text-xs text-cacao/40 hover:text-bronze luxury-transition">
                     <Mail size={14} />

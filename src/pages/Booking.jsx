@@ -190,7 +190,7 @@ export default function Booking() {
                     </div>
                     <div>
                       <label className="font-body text-xs tracking-widest uppercase text-cacao/40 mb-2">Phone</label>
-                      <input type="tel" placeholder="+44 207 123 4567" value={formData.phone} onChange={(e) => update("phone", e.target.value)} className={inputClass} />
+                      <input type="tel" placeholder="+49 152 2400 1111" value={formData.phone} onChange={(e) => update("phone", e.target.value)} className={inputClass} />
                     </div>
                     <div>
                       <label className="font-body text-xs tracking-widest uppercase text-cacao/40 mb-2">Special Requests</label>
