@@ -19,21 +19,21 @@ const DETAIL_IMG = "/images/4bd2100d2_generated_26d5f150.png";
 
 const fleetData = [
   {
-    title: "Business Class",
-    subtitle: "BMW i7 · Mercedes EQS",
-    image: SUV_IMG,
-    features: ["Zero-emission", "Wi-Fi", "Leather interior"],
-  },
-  {
     title: "First Class",
-    subtitle: "Lucid Air · Mercedes-Maybach",
-    image: FIRST_IMG,
+    subtitle: "Mercedes-Maybach S-Class",
+    image: HERO_IMG,
     features: ["Champagne service", "Privacy partition", "Personal host"],
   },
   {
+    title: "Luxury Sedan",
+    subtitle: "Lucid Air Grand Touring",
+    image: FIRST_IMG,
+    features: ["Sport comfort", "Dynamic ride", "Premium audio"],
+  },
+  {
     title: "Premium SUV",
-    subtitle: "Range Rover · BMW iX",
-    image: DETAIL_IMG,
+    subtitle: "Electric Luxury SUV",
+    image: SUV_IMG,
     features: ["Spacious cabin", "Airport transfer", "Luggage priority"],
   },
 ];

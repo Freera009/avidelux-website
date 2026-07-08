@@ -7,10 +7,12 @@ import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
 
 const vehicleOptions = [
-  { name: "Business Class", desc: "BMW i7 · Mercedes EQS", price: "From €85" },
-  { name: "First Class", desc: "Lucid Air · Mercedes-Maybach", price: "From €145" },
-  { name: "Premium SUV", desc: "Range Rover · BMW iX", price: "From €120" },
-  { name: "Executive Van", desc: "Mercedes V-Class EQV", price: "From €165" },
+  { name: "First Class", desc: "Mercedes-Maybach S-Class", price: "From €145" },
+  { name: "Business Class", desc: "Mercedes S-Class", price: "From €85" },
+  { name: "Luxury Sedan", desc: "Lucid Air Grand Touring", price: "From €110" },
+  { name: "Premium SUV", desc: "Electric Luxury SUV", price: "From €120" },
+  { name: "Airport Express", desc: "Cadillac Escalade IQ", price: "From €95" },
+  { name: "Executive Class", desc: "Bespoke Interior Craftsmanship", price: "From €165" },
 ];
 
 export default function Booking() {

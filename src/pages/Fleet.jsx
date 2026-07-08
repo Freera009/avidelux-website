@@ -18,40 +18,40 @@ const COASTAL = "/images/df3b79dfd_generated_d50a62bb.png";
 
 const fleetVehicles = [
   {
-    title: "Business Class",
-    subtitle: "BMW i7 · Mercedes EQS",
-    image: SUV_IMG,
-    features: ["Zero-emission", "Wi-Fi", "Leather interior", "USB-C charging"],
-  },
-  {
     title: "First Class",
-    subtitle: "Lucid Air Grand Touring · Mercedes-Maybach",
-    image: FIRST_IMG,
+    subtitle: "Mercedes-Maybach S-Class",
+    image: HERO_IMG,
     features: ["Champagne service", "Privacy partition", "Personal host", "Noise cancelling cabin"],
   },
   {
-    title: "Premium SUV",
-    subtitle: "Range Rover Electric · BMW iX M60",
-    image: DETAIL_IMG,
-    features: ["Spacious cabin", "Airport priority", "6 passengers", "Luggage capacity"],
-  },
-  {
-    title: "Executive Van",
-    subtitle: "Mercedes V-Class EQV",
-    image: HERO_IMG,
-    features: ["Conference seating", "8 passengers", "Extended luggage", "Corporate events"],
+    title: "Business Class",
+    subtitle: "Mercedes S-Class",
+    image: COASTAL,
+    features: ["Zero-emission", "Wi-Fi", "Leather interior", "USB-C charging"],
   },
   {
     title: "Luxury Sedan",
-    subtitle: "Porsche Taycan · Audi e-tron GT",
-    image: COASTAL,
+    subtitle: "Lucid Air Grand Touring",
+    image: FIRST_IMG,
     features: ["Sport comfort", "Dynamic ride", "Premium audio", "Performance cabin"],
   },
   {
+    title: "Premium SUV",
+    subtitle: "Electric Luxury SUV",
+    image: SUV_IMG,
+    features: ["Spacious cabin", "Airport priority", "6 passengers", "Luggage capacity"],
+  },
+  {
     title: "Airport Express",
-    subtitle: "Tesla Model S · Mercedes EQE",
+    subtitle: "Cadillac Escalade IQ",
     image: DASHBOARD_IMG,
     features: ["Flight tracking", "Meet & greet", "Fast dispatch", "Terminal navigation"],
+  },
+  {
+    title: "Executive Class",
+    subtitle: "Bespoke Interior Craftsmanship",
+    image: DETAIL_IMG,
+    features: ["Hand-stitched leather", "Ambient lighting", "Whisper-quiet cabin", "Concierge detailing"],
   },
 ];
 
@@ -183,10 +183,12 @@ export default function Fleet() {
                   />
                   <select className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao/30 focus:outline-none focus:border-bronze luxury-transition">
                     <option value="">Preferred Vehicle Class</option>
-                    <option value="business">Business Class</option>
                     <option value="first">First Class</option>
+                    <option value="business">Business Class</option>
+                    <option value="sedan">Luxury Sedan</option>
                     <option value="suv">Premium SUV</option>
-                    <option value="van">Executive Van</option>
+                    <option value="airport">Airport Express</option>
+                    <option value="executive">Executive Class</option>
                   </select>
                   <button className="w-full mt-6 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2">
                     Request Consultation

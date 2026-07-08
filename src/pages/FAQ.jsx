@@ -54,7 +54,7 @@ const faqSections = [
     items: [
       {
         q: "What types of vehicles are in your fleet?",
-        a: "Our fleet includes Business Class (BMW i7, Mercedes EQS), First Class (Lucid Air, Mercedes-Maybach), and Premium SUV (Range Rover Electric, BMW iX). All vehicles are under 18 months old and 100% electric or hybrid.",
+        a: "Our fleet includes First Class (Mercedes-Maybach S-Class), Business Class (Mercedes S-Class), Luxury Sedan (Lucid Air Grand Touring), and Premium SUV (Electric Luxury SUV). All vehicles are under 18 months old and 100% electric or hybrid.",
       },
       {
         q: "How does Scope 3 carbon reporting work?",

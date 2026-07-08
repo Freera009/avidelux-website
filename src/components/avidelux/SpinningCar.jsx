@@ -36,7 +36,8 @@ export default function SpinningCar({
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     if (!isDragging) {
-      rotation.set(v * 720);
+      // Keep rotation within a range that never shows the flat image edge-on
+      rotation.set(-25 + v * 50);
     }
   });
 
@@ -53,7 +54,9 @@ export default function SpinningCar({
   const handleDragMove = (clientX) => {
     if (!isDragging) return;
     const delta = (clientX - dragStartX.current) * 0.5;
-    rotation.set(dragStartRotation.current + delta);
+    const next = dragStartRotation.current + delta;
+    // Clamp so the flat image never rotates edge-on and disappears
+    rotation.set(Math.max(-35, Math.min(35, next)));
   };
 
   return (
