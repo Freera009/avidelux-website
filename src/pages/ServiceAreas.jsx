@@ -63,19 +63,19 @@ export default function ServiceAreas() {
               <MapContainer
                 center={[30, 20]}
                 zoom={2}
-                scrollWheelZoom={false}
-                style={{ height: "100%", width: "100%", background: "#EDE8DD" }}
+                scrollWheelZoom={true}
+                style={{ height: "100%", width: "100%", background: "#0a0a0a" }}
                 attributionControl={false}
               >
                 <TileLayer
-                  url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+                  url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
                 />
                 {cities.map((city, i) => (
                   <CircleMarker
                     key={i}
                     center={city.coords}
-                    radius={6}
-                    pathOptions={{ color: "#8C7355", fillColor: "#1F1111", fillOpacity: 0.8, weight: 1 }}
+                    radius={7}
+                    pathOptions={{ color: "#D4AF7A", fillColor: "#8C7355", fillOpacity: 0.9, weight: 2 }}
                   >
                     <Popup>
                       <div style={{ fontFamily: "Inter, sans-serif" }}>
