@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const vehicleOptions = [
   { name: "First Class", desc: "Mercedes-Maybach S-Class", price: "From €145" },
@@ -38,6 +39,11 @@ export default function Booking() {
 
   return (
     <PageTransition>
+      <SEO
+        title="Book Your Chauffeur"
+        description="Book a luxury chauffeur with AviDelux in minutes — choose your vehicle class, date, and destination for a seamless premium transfer."
+        path="/booking"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

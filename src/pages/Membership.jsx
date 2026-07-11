@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const VIP_IMG = "/images/0365aea9b_generated_image.png";
 const HOTEL_IMG = "/images/88fbb552e_generated_43d254ea.png";
@@ -66,6 +67,11 @@ const tiers = [
 export default function Membership() {
   return (
     <PageTransition>
+      <SEO
+        title="Membership"
+        description="Join AviDelux Membership for priority booking, exclusive rates, and dedicated concierge support with every luxury transfer."
+        path="/membership"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

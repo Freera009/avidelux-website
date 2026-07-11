@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const CHAUFFEUR_IMG = "/images/af1003db8_generated_image.png";
 const INTERIOR_IMG = "/images/7118d11e4_generated_fea8ad00.png";
@@ -39,6 +40,11 @@ export default function Careers() {
 
   return (
     <PageTransition>
+      <SEO
+        title="Careers"
+        description="Explore career opportunities at AviDelux and join a team dedicated to premium chauffeur service and luxury hospitality."
+        path="/careers"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

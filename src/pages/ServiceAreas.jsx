@@ -7,6 +7,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const AERIAL_IMG = "/images/c96c76a46_generated_image.png";
 
@@ -35,6 +36,11 @@ const regions = [
 export default function ServiceAreas() {
   return (
     <PageTransition>
+      <SEO
+        title="Service Areas"
+        description="AviDelux provides premium chauffeur coverage across major cities worldwide — explore our global service area network."
+        path="/service-areas"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

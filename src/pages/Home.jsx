@@ -8,6 +8,7 @@ import FleetCard from "@/components/avidelux/FleetCard";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import ScrollToast from "@/components/avidelux/ScrollToast";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 import SpinningCar from "@/components/avidelux/SpinningCar";
 
 const HERO_IMG = "/images/f02e2c51b_generated_f64341c9.png";
@@ -45,6 +46,10 @@ export default function Home() {
 
   return (
     <PageTransition>
+      <SEO
+        description="AviDelux delivers premium chauffeur services and luxury vehicle transfers worldwide — professional, discreet, and reliable transportation for every occasion."
+        path="/"
+      />
       <Navbar />
 
       {/* Hero */}

@@ -1,0 +1,16 @@
+{
+  "name": "AviDelux — Premium Chauffeur Service",
+  "short_name": "AviDelux",
+  "description": "Premium chauffeur services and luxury vehicle transfers worldwide.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF7EC",
+  "theme_color": "#8C7355",
+  "icons": [
+    {
+      "src": "/images/8cfc8115c_generated_7886680d.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

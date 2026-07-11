@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const HQ_IMG = "/images/8dcb7bb09_generated_image.png";
 const CHAUFFEUR_IMG = "/images/af1003db8_generated_image.png";
@@ -27,6 +28,11 @@ const timeline = [
 export default function About() {
   return (
     <PageTransition>
+      <SEO
+        title="About AviDelux"
+        description="Learn about AviDelux's commitment to premium chauffeur service, professional drivers, and a luxury fleet built around discretion and reliability."
+        path="/about"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

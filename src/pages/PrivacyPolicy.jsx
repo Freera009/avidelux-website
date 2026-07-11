@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const sections = [
   {
@@ -72,6 +73,11 @@ const sections = [
 export default function PrivacyPolicy() {
   return (
     <PageTransition>
+      <SEO
+        title="Privacy Policy"
+        description="Read the AviDelux privacy policy to learn how we collect, use, and protect your personal information."
+        path="/privacy-policy"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

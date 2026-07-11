@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const INTERIOR_IMG = "/images/7118d11e4_generated_fea8ad00.png";
 const COASTAL_IMG = "/images/df3b79dfd_generated_d50a62bb.png";
@@ -51,6 +52,11 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <PageTransition>
+      <SEO
+        title="Client Testimonials"
+        description="Read what AviDelux clients say about our luxury chauffeur service, professional drivers, and premium travel experience."
+        path="/testimonials"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

@@ -4,6 +4,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const RECEPTION_IMG = "/images/c278dd8e7_generated_image.png";
 
@@ -21,6 +22,11 @@ export default function Contact() {
 
   return (
     <PageTransition>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with AviDelux's 24/7 concierge team by phone, email, or WhatsApp for bookings, questions, or corporate accounts."
+        path="/contact"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

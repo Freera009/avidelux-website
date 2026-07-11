@@ -7,6 +7,7 @@ import FleetCard from "@/components/avidelux/FleetCard";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import ParallaxText from "@/components/avidelux/ParallaxText";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 import SpinningCar from "@/components/avidelux/SpinningCar";
 
 const DASHBOARD_IMG = "/images/1c96283a7_generated_902bb949.png";
@@ -58,6 +59,11 @@ const fleetVehicles = [
 export default function Fleet() {
   return (
     <PageTransition>
+      <SEO
+        title="Our Luxury Fleet"
+        description="Explore AviDelux's luxury fleet, including the Mercedes-Maybach S-Class, Mercedes S-Class, Lucid Air, Cadillac Escalade IQ, and premium electric SUVs."
+        path="/fleet"
+      />
       <Navbar />
 
       {/* Hero */}

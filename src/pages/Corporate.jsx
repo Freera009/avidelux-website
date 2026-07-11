@@ -6,6 +6,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const CORP_HERO = "/images/99725ca19_generated_26990631.png";
 const COASTAL = "/images/df3b79dfd_generated_d50a62bb.png";
@@ -50,6 +51,11 @@ export default function Corporate() {
 
   return (
     <PageTransition>
+      <SEO
+        title="Corporate Chauffeur Services"
+        description="Executive chauffeur and corporate transfer solutions from AviDelux — reliable, discreet ground transportation for business travel and events."
+        path="/corporate"
+      />
       <Navbar />
 
       {/* Hero */}

@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const INTERIOR_IMG = "/images/7118d11e4_generated_fea8ad00.png";
 const HOTEL_IMG = "/images/88fbb552e_generated_43d254ea.png";
@@ -113,6 +114,11 @@ export default function FAQ() {
 
   return (
     <PageTransition>
+      <SEO
+        title="Frequently Asked Questions"
+        description="Answers to common questions about AviDelux chauffeur services, booking, fleet, pricing, and coverage areas."
+        path="/faq"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

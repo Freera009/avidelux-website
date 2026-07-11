@@ -6,6 +6,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const COASTAL = "/images/df3b79dfd_generated_d50a62bb.png";
 
@@ -60,6 +61,11 @@ export default function Services() {
 
   return (
     <PageTransition>
+      <SEO
+        title="Chauffeur Services"
+        description="Airport transfers, corporate travel, event chauffeuring, and hourly hire — discover the full range of AviDelux luxury chauffeur services."
+        path="/services"
+      />
       <Navbar />
 
       {/* Hero + Calculator */}

@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const WEDDING_IMG = "/images/3b6853f1e_generated_image.png";
 const HOTEL_IMG = "/images/88fbb552e_generated_43d254ea.png";
@@ -38,6 +39,11 @@ const packages = [
 export default function Events() {
   return (
     <PageTransition>
+      <SEO
+        title="Event Chauffeur Services"
+        description="Arrive in style with AviDelux event chauffeur services for weddings, galas, corporate functions, and special occasions."
+        path="/events"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">

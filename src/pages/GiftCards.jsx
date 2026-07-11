@@ -5,6 +5,7 @@ import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import PageTransition from "@/components/avidelux/PageTransition";
+import SEO from "@/components/avidelux/SEO";
 
 const GIFT_IMG = "/images/490246c66_generated_image.png";
 
@@ -41,6 +42,11 @@ export default function GiftCards() {
 
   return (
     <PageTransition>
+      <SEO
+        title="Gift Cards"
+        description="Give the gift of luxury travel with an AviDelux gift card, redeemable for premium chauffeur services worldwide."
+        path="/gift-cards"
+      />
       <Navbar />
 
       <section className="pt-32 pb-12">
