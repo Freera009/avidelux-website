@@ -13,12 +13,11 @@ const mainLinks = [
 ];
 
 const moreLinks = [
-  { label: "About Us", path: "/about" },
+  { label: "Our Heritage", path: "/about" },
   { label: "Booking Portal", path: "/booking" },
-  { label: "Contact", path: "/contact" },
-  { label: "Testimonials", path: "/testimonials" },
+  { label: "Inquiries & Bespoke Requests", path: "/contact" },
+  { label: "Client Journals / Executive Reviews", path: "/testimonials" },
   { label: "Service Areas", path: "/service-areas" },
-  { label: "Membership", path: "/membership" },
   { label: "Gift Cards", path: "/gift-cards" },
   { label: "Careers", path: "/careers" },
   { label: "Events & Tours", path: "/events" },

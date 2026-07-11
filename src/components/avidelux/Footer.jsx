@@ -42,7 +42,6 @@ const footerSections = [
       { label: "Booking Portal", path: "/booking" },
       { label: "Events & Tours", path: "/events" },
       { label: "Gift Cards", path: "/gift-cards" },
-      { label: "Membership", path: "/membership" },
     ],
   },
   {

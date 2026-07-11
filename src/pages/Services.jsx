@@ -27,7 +27,7 @@ const metrics = [
 const services = [
   {
     title: "Airport Transfers",
-    desc: "Flight-tracked arrivals, meet-and-greet at the terminal, and seamless luggage assistance. Your chauffeur adjusts to delays automatically.",
+    desc: "The AviDelux airport transfer service is engineered to eliminate the friction of international travel. From the moment your flight touches down, our network synchronizes with real-time air traffic control data, ensuring your chauffeur is perfectly positioned at the arrivals terminal regardless of early landings or commercial delays. Enjoy 60 minutes of complimentary waiting time, full inclusion of airport toll fees, and a dedicated professional chauffeur who handles your luggage with absolute care, escorting you seamlessly from the arrivals gate to your pristine executive vehicle. We transform airport transit into an uninterrupted, stress-free extension of your executive day.",
     icon: Car,
   },
   {
@@ -42,7 +42,7 @@ const services = [
   },
   {
     title: "Hourly Chauffeur",
-    desc: "Book a dedicated chauffeur by the hour for multi-stop business days, client tours, or city explorations with full flexibility.",
+    desc: "Designed for dynamic schedules, high-stakes business roadshows, and multi-destination itineraries, our Hourly & As-Directed service grants you absolute logistical flexibility. Rather than booking point-to-point, you retain a dedicated premium vehicle and a certified professional chauffeur for a customized duration. Conduct confidential phone calls, review sensitive corporate presentations, or navigate dense European business districts with the peace of mind that your vehicle is permanently on standby. No destination changes require re-booking; your schedule dictates the route, billed transparently by the hour with unlimited stops.",
     icon: Clock,
   },
 ];

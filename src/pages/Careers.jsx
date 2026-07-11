@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Shield, Award, Car, Users } from "lucide-react";
+import { ArrowRight, Check, Shield, Award, Globe } from "lucide-react";
 import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
@@ -11,10 +11,9 @@ const CHAUFFEUR_IMG = "/images/af1003db8_generated_image.png";
 const INTERIOR_IMG = "/images/7118d11e4_generated_fea8ad00.png";
 
 const requirements = [
-  { icon: Shield, title: "Clean License", desc: "Minimum 5 years driving experience with a spotless record. Commercial license preferred." },
-  { icon: Award, title: "Luxury Hospitality", desc: "Background in luxury hospitality, aviation, or premium service. Discretion is non-negotiable." },
-  { icon: Car, title: "Advanced Driving", desc: "Defensive driving certification. Familiarity with electric and hybrid luxury vehicles." },
-  { icon: Users, title: "Impeccable Presentation", desc: "Professional grooming standards. Ability to maintain composure under pressure." },
+  { icon: Shield, title: "License & Insurance", desc: "Valid Local Chauffeur/Limousine License & Commercial Passenger Insurance." },
+  { icon: Globe, title: "Multilingual Proficiency", desc: "Fluency in English plus the local language is mandatory." },
+  { icon: Award, title: "Black-Tie Protocol", desc: "Strict adherence to the AviDelux Black-Tie Dress Code & Protocol." },
 ];
 
 const benefits = [
@@ -54,12 +53,12 @@ export default function Careers() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              Join the AviDelux driving team
+              Join Europe's Most Elite Chauffeur Network
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              We seek exceptional individuals who embody discretion, precision, and luxury hospitality. If you demand excellence from yourself, we want to meet you.
+              We do not hire gig-workers or casual drivers. At AviDelux, we contract exclusively with certified professional chauffeurs who view ground logistics as an elite profession. If you own a pristine, late-model executive vehicle (Mercedes-Benz E/S Class, V-Class, or equivalent) and possess flawless professional driving credentials, immaculate protocol training, and local geographical expertise, we invite you to apply to our supplier network.
             </p>
           </SectionReveal>
         </div>
@@ -81,11 +80,11 @@ export default function Careers() {
             <div className="mb-16">
               <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">What It Takes</p>
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-cacao leading-tight max-w-lg">
-                The standard is exacting
+                Minimum Network Requirements
               </h2>
             </div>
           </SectionReveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {requirements.map((req, i) => (
               <SectionReveal key={i} delay={i * 0.08}>
                 <div className="p-8 border border-cacao/10 rounded-sm hover:bg-cream luxury-transition luxury-card">

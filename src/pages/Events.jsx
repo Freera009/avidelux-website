@@ -53,12 +53,12 @@ export default function Events() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              Bespoke transport for life's extraordinary moments
+              Private Delegations, State Forums & Corporate Roadshows
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              From weddings to wine tours, galas to corporate gatherings. AviDelux crafts unforgettable journeys with meticulous attention to every detail.
+              Managing logistics for large-scale events requires precision planning, bulletproof communication, and robust capacity. AviDelux provides dedicated on-site logistics coordinators and specialized fleet deployment (including Mercedes-Benz V-Class luxury MPVs and premium executive minibuses) for diplomatic summits, corporate annual meetings, IPO roadshows, and exclusive private events. We handle route optimization, real-time chauffeur positioning, and dynamic schedule adjustments so your event logistics run like clockwork.
             </p>
           </SectionReveal>
         </div>

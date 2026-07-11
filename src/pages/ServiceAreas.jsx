@@ -12,25 +12,25 @@ import SEO from "@/components/avidelux/SEO";
 const AERIAL_IMG = "/images/c96c76a46_generated_image.png";
 
 const cities = [
-  { name: "London", country: "United Kingdom", coords: [51.5074, -0.1278], rides: "18,400+" },
-  { name: "Paris", country: "France", coords: [48.8566, 2.3522], rides: "12,200+" },
-  { name: "New York", country: "United States", coords: [40.7128, -74.0060], rides: "15,800+" },
-  { name: "Dubai", country: "UAE", coords: [25.2048, 55.2708], rides: "9,600+" },
-  { name: "Singapore", country: "Singapore", coords: [1.3521, 103.8198], rides: "7,300+" },
-  { name: "Tokyo", country: "Japan", coords: [35.6762, 139.6503], rides: "6,100+" },
-  { name: "Zurich", country: "Switzerland", coords: [47.3769, 8.5417], rides: "8,900+" },
-  { name: "Hong Kong", country: "China", coords: [22.3193, 114.1694], rides: "5,400+" },
-  { name: "Madrid", country: "Spain", coords: [40.4168, -3.7038], rides: "4,200+" },
-  { name: "Stockholm", country: "Sweden", coords: [59.3293, 18.0686], rides: "3,800+" },
+  { name: "Frankfurt", country: "Germany", coords: [50.1109, 8.6821], region: "DACH Region" },
+  { name: "Munich", country: "Germany", coords: [48.1351, 11.5820], region: "DACH Region" },
+  { name: "Zurich", country: "Switzerland", coords: [47.3769, 8.5417], region: "DACH Region" },
+  { name: "Vienna", country: "Austria", coords: [48.2082, 16.3738], region: "DACH Region" },
+  { name: "Geneva", country: "Switzerland", coords: [46.2044, 6.1432], region: "DACH Region" },
+  { name: "Paris", country: "France", coords: [48.8566, 2.3522], region: "Benelux & France" },
+  { name: "Brussels", country: "Belgium", coords: [50.8503, 4.3517], region: "Benelux & France" },
+  { name: "Amsterdam", country: "Netherlands", coords: [52.3676, 4.9041], region: "Benelux & France" },
+  { name: "Luxembourg", country: "Luxembourg", coords: [49.6116, 6.1319], region: "Benelux & France" },
+  { name: "Milan", country: "Italy", coords: [45.4642, 9.1900], region: "Southern & Eastern Europe" },
+  { name: "Rome", country: "Italy", coords: [41.9028, 12.4964], region: "Southern & Eastern Europe" },
+  { name: "Prague", country: "Czech Republic", coords: [50.0755, 14.4378], region: "Southern & Eastern Europe" },
+  { name: "Budapest", country: "Hungary", coords: [47.4979, 19.0402], region: "Southern & Eastern Europe" },
 ];
 
 const regions = [
-  { name: "Europe", count: "48 cities", desc: "London, Paris, Zurich, Madrid, Stockholm, Milan, Amsterdam, and more." },
-  { name: "North America", count: "32 cities", desc: "New York, Los Angeles, Chicago, Toronto, Miami, San Francisco, and more." },
-  { name: "Middle East", count: "18 cities", desc: "Dubai, Abu Dhabi, Doha, Riyadh, Jeddah, Istanbul, and more." },
-  { name: "Asia Pacific", count: "42 cities", desc: "Singapore, Tokyo, Hong Kong, Sydney, Seoul, Bangkok, and more." },
-  { name: "Latin America", count: "24 cities", desc: "São Paulo, Mexico City, Buenos Aires, Santiago, and more." },
-  { name: "Africa", count: "16 cities", desc: "Cape Town, Johannesburg, Nairobi, Cairo, Lagos, and more." },
+  { name: "DACH Region", count: "5 cities", desc: "Frankfurt, Munich, Zurich, Vienna, and Geneva." },
+  { name: "Benelux & France", count: "4 cities", desc: "Paris, Brussels, Amsterdam, and Luxembourg." },
+  { name: "Southern & Eastern Europe", count: "4 cities", desc: "Milan, Rome, Prague, and Budapest." },
 ];
 
 export default function ServiceAreas() {
@@ -38,7 +38,7 @@ export default function ServiceAreas() {
     <PageTransition>
       <SEO
         title="Service Areas"
-        description="AviDelux provides premium chauffeur coverage across major cities worldwide — explore our global service area network."
+        description="AviDelux provides premium chauffeur coverage across Europe's principal business hubs — explore our DACH, Benelux & France, and Southern & Eastern Europe network."
         path="/service-areas"
       />
       <Navbar />
@@ -50,12 +50,12 @@ export default function ServiceAreas() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              200+ cities. Five continents. One standard.
+              Our Global Footprint: Principal Business Hubs
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              Wherever business takes you, AviDelux delivers the same uncompromising luxury. Autonomous dispatch nodes operate globally, 24/7.
+              AviDelux operates across Europe's primary financial capitals, diplomatic centers, and luxury destinations through a highly vetted, unified local network. From airport transfers at major international hubs to cross-border intercity transit, we ensure identical premium standards everywhere.
             </p>
           </SectionReveal>
         </div>
@@ -67,8 +67,8 @@ export default function ServiceAreas() {
           <SectionReveal>
             <div className="rounded-sm overflow-hidden border border-cacao/10 h-[50vh] lg:h-[60vh]">
               <MapContainer
-                center={[30, 20]}
-                zoom={2}
+                center={[49, 10]}
+                zoom={4}
                 scrollWheelZoom={true}
                 style={{ height: "100%", width: "100%", background: "#0a0a0a" }}
                 attributionControl={false}
@@ -87,7 +87,7 @@ export default function ServiceAreas() {
                       <div style={{ fontFamily: "Inter, sans-serif" }}>
                         <strong>{city.name}, {city.country}</strong>
                         <br />
-                        <span style={{ color: "#8C7355" }}>{city.rides} rides delivered</span>
+                        <span style={{ color: "#8C7355" }}>{city.region}</span>
                       </div>
                     </Popup>
                   </CircleMarker>
@@ -145,7 +145,7 @@ export default function ServiceAreas() {
                   <div>
                     <p className="font-body text-sm font-medium text-cacao">{city.name}</p>
                     <p className="font-body text-xs text-cacao/40 mt-1">{city.country}</p>
-                    <p className="font-body text-xs text-bronze mt-1">{city.rides}</p>
+                    <p className="font-body text-xs text-bronze mt-1">{city.region}</p>
                   </div>
                 </div>
               </SectionReveal>
