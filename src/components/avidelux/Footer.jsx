@@ -6,32 +6,14 @@ import Logo from "@/components/avidelux/Logo";
 const SKYLINE_IMG =
   "/images/8cfc8115c_generated_7886680d.png";
 
-const testimonials = [
-  {
-    quote: "AviDelux redefined what we expect from corporate ground travel. The AI dispatch is flawless.",
-    author: "Victoria Chen",
-    title: "CFO, Meridian Capital",
-  },
-  {
-    quote: "Every detail is impeccable—from the vehicle presentation to the zero-emission reporting for our ESG commitments.",
-    author: "James Hartwell",
-    title: "Managing Director, Atlas Ventures",
-  },
-  {
-    quote: "Sixty-second dispatch in Zurich at midnight. I've never experienced anything like it.",
-    author: "Sofia Lindström",
-    title: "Partner, Nordic Equity Group",
-  },
-];
-
 const footerSections = [
   {
     title: "Company",
     links: [
-      { label: "About Us", path: "/about" },
+      { label: "Our Heritage", path: "/about" },
       { label: "Careers", path: "/careers" },
-      { label: "Contact", path: "/contact" },
-      { label: "Testimonials", path: "/testimonials" },
+      { label: "Inquiries & Bespoke Requests", path: "/contact" },
+      { label: "Client Journals / Executive Reviews", path: "/testimonials" },
     ],
   },
   {
@@ -67,26 +49,8 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-12">
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-16 max-w-xl">
-            What our clients say
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {testimonials.map((t, i) => (
-              <div key={i} className="border-t border-ivory/15 pt-8 group">
-                <p className="font-body text-ivory/80 text-base leading-relaxed mb-8">
-                  "{t.quote}"
-                </p>
-                <p className="font-body text-sm font-medium text-ivory">{t.author}</p>
-                <p className="font-body text-xs text-ivory/50 mt-1">{t.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="border-t border-ivory/10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
+        <div>
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-12">
             <div className="grid md:grid-cols-4 gap-12">
               <div>
                 <Logo size={36} light />
