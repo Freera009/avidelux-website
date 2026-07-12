@@ -37,6 +37,27 @@ export default function Booking() {
 
   const inputClass = "w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition";
 
+  const submitBooking = () => {
+    const subject = `New Booking Request — ${formData.name}`;
+    const body = [
+      `Pickup: ${formData.pickup}`,
+      `Drop-off: ${formData.dropoff}`,
+      `Date: ${formData.date || "ASAP"}`,
+      `Time: ${formData.time}`,
+      `Vehicle: ${formData.vehicle}`,
+      `Passengers: ${formData.passengers}`,
+      `Luggage: ${formData.luggage} bags`,
+      "",
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      `Special requests: ${formData.notes || "None"}`,
+    ].join("\n");
+
+    window.location.href = `mailto:info@avidelux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setConfirmed(true);
+  };
+
   return (
     <PageTransition>
       <SEO
@@ -70,9 +91,9 @@ export default function Booking() {
             <SectionReveal>
               <div className="bg-cream p-12 rounded-sm text-center">
                 <CheckCircle size={48} className="text-bronze mx-auto mb-6" />
-                <h2 className="font-heading text-2xl md:text-3xl font-semibold text-cacao mb-3">Booking Confirmed</h2>
+                <h2 className="font-heading text-2xl md:text-3xl font-semibold text-cacao mb-3">Booking Request Sent</h2>
                 <p className="font-body text-sm text-cacao/50 max-w-sm mx-auto mb-8">
-                  Your chauffeur has been dispatched. You'll receive confirmation and driver details at {formData.email} shortly.
+                  Your email app should have opened with your booking details addressed to our concierge team — please hit send to complete your request. We'll confirm your chauffeur at {formData.email} shortly.
                 </p>
                 <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-8 text-left">
                   <div>
@@ -209,7 +230,7 @@ export default function Booking() {
                     </div>
                     <div className="flex gap-3">
                       <button onClick={() => setStep(2)} className="px-6 border border-cacao/15 text-cacao py-4 font-body text-sm hover:bg-ivory luxury-transition rounded-sm">Back</button>
-                      <button onClick={() => setConfirmed(true)} disabled={!formData.name || !formData.email} className="flex-1 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2 disabled:opacity-30">
+                      <button onClick={submitBooking} disabled={!formData.name || !formData.email} className="flex-1 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2 disabled:opacity-30">
                         Confirm Booking
                         <ArrowRight size={16} />
                       </button>
