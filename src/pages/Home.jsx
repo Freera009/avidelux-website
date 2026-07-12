@@ -61,11 +61,22 @@ export default function Home() {
             </p>
           </SectionReveal>
 
-          <SectionReveal delay={0.1}>
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-cacao leading-[1.05] max-w-5xl">
-              Next-generation chauffeur, dispatched by AI
-            </h1>
-          </SectionReveal>
+          <h1
+            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-cacao leading-[1.05] max-w-5xl"
+            style={{ perspective: 800 }}
+          >
+            {"Next-generation chauffeur, dispatched by AI".split(" ").map((word, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, rotateX: -100, y: 30 }}
+                animate={{ opacity: 1, rotateX: 0, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.15 + i * 0.06, ease: [0.19, 1, 0.22, 1] }}
+                style={{ display: "inline-block", transformOrigin: "50% 100%", marginRight: "0.25em" }}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </h1>
 
           <SectionReveal delay={0.2}>
             <p className="font-body text-base md:text-lg text-cacao/50 max-w-lg mt-8 leading-relaxed">
