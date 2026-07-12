@@ -17,6 +17,8 @@ import Contact from './pages/Contact';
 import Testimonials from './pages/Testimonials';
 import ServiceAreas from './pages/ServiceAreas';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Imprint from './pages/Imprint';
+import Terms from './pages/Terms';
 import Membership from './pages/Membership';
 import GiftCards from './pages/GiftCards';
 import Careers from './pages/Careers';
@@ -59,6 +61,8 @@ const AuthenticatedApp = () => {
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/service-areas" element={<ServiceAreas />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/imprint" element={<Imprint />} />
+      <Route path="/terms" element={<Terms />} />
       <Route path="/membership" element={<Membership />} />
       <Route path="/gift-cards" element={<GiftCards />} />
       <Route path="/careers" element={<Careers />} />

@@ -22,6 +22,8 @@ const moreLinks = [
   { label: "Careers", path: "/careers" },
   { label: "Events & Tours", path: "/events" },
   { label: "Privacy Policy", path: "/privacy-policy" },
+  { label: "Imprint", path: "/imprint" },
+  { label: "Terms & Conditions", path: "/terms" },
 ];
 
 export default function Navbar() {

@@ -33,6 +33,8 @@ const footerSections = [
       { label: "Service Areas", path: "/service-areas" },
       { label: "B2B Corporate", path: "/corporate" },
       { label: "Privacy Policy", path: "/privacy-policy" },
+      { label: "Imprint", path: "/imprint" },
+      { label: "Terms & Conditions", path: "/terms" },
     ],
   },
 ];
