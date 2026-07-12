@@ -207,9 +207,9 @@ export default function Fleet() {
                     <Phone size={14} />
                     +49 152 2400 1111
                   </a>
-                  <a href="mailto:corporate@avidelux.com" className="flex items-center gap-2 font-body text-xs text-cacao/40 hover:text-bronze luxury-transition">
+                  <a href="mailto:info@avidelux.com" className="flex items-center gap-2 font-body text-xs text-cacao/40 hover:text-bronze luxury-transition">
                     <Mail size={14} />
-                    corporate@avidelux.com
+                    info@avidelux.com
                   </a>
                 </div>
               </div>
