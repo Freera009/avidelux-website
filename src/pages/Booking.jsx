@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "@formspree/react";
 import { ArrowRight, CheckCircle, MapPin, Calendar, Clock, Car } from "lucide-react";
 import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
@@ -31,31 +32,45 @@ export default function Booking() {
     phone: "",
     notes: "",
   });
-  const [confirmed, setConfirmed] = useState(false);
+  const [formspreeState, submitToFormspree, resetFormspree] = useForm("xvzeoopb");
 
   const update = (field, value) => setFormData({ ...formData, [field]: value });
 
   const inputClass = "w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition";
 
   const submitBooking = () => {
-    const subject = `New Booking Request — ${formData.name}`;
-    const body = [
-      `Pickup: ${formData.pickup}`,
-      `Drop-off: ${formData.dropoff}`,
-      `Date: ${formData.date || "ASAP"}`,
-      `Time: ${formData.time}`,
-      `Vehicle: ${formData.vehicle}`,
-      `Passengers: ${formData.passengers}`,
-      `Luggage: ${formData.luggage} bags`,
-      "",
-      `Name: ${formData.name}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone}`,
-      `Special requests: ${formData.notes || "None"}`,
-    ].join("\n");
+    submitToFormspree({
+      subject: `New Booking Request — ${formData.name}`,
+      pickup: formData.pickup,
+      dropoff: formData.dropoff,
+      date: formData.date || "ASAP",
+      time: formData.time,
+      vehicle: formData.vehicle,
+      passengers: formData.passengers,
+      luggage: `${formData.luggage} bags`,
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      notes: formData.notes || "None",
+    });
+  };
 
-    window.location.href = `mailto:info@avidelux.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setConfirmed(true);
+  const bookAnotherRide = () => {
+    resetFormspree();
+    setStep(1);
+    setFormData({
+      pickup: "",
+      dropoff: "",
+      date: "",
+      time: "",
+      vehicle: "",
+      passengers: "1",
+      luggage: "0",
+      name: "",
+      email: "",
+      phone: "",
+      notes: "",
+    });
   };
 
   return (
@@ -87,13 +102,13 @@ export default function Booking() {
 
       <section className="pb-24">
         <div className="max-w-3xl mx-auto px-6">
-          {confirmed ? (
+          {formspreeState.succeeded ? (
             <SectionReveal>
               <div className="bg-cream p-12 rounded-sm text-center">
                 <CheckCircle size={48} className="text-bronze mx-auto mb-6" />
                 <h2 className="font-heading text-2xl md:text-3xl font-semibold text-cacao mb-3">Booking Request Sent</h2>
                 <p className="font-body text-sm text-cacao/50 max-w-sm mx-auto mb-8">
-                  Your email app should have opened with your booking details addressed to our concierge team — please hit send to complete your request. We'll confirm your chauffeur at {formData.email} shortly.
+                  Your request has been sent to our concierge team. We'll confirm your chauffeur at {formData.email} shortly.
                 </p>
                 <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-8 text-left">
                   <div>
@@ -113,7 +128,7 @@ export default function Booking() {
                     <p className="font-body text-sm text-bronze">0g CO₂</p>
                   </div>
                 </div>
-                <button onClick={() => { setConfirmed(false); setStep(1); }} className="font-body text-sm text-bronze hover:text-cacao luxury-transition">
+                <button onClick={bookAnotherRide} className="font-body text-sm text-bronze hover:text-cacao luxury-transition">
                   Book another ride
                 </button>
               </div>
@@ -228,10 +243,13 @@ export default function Booking() {
                     <div className="bg-ivory p-4 rounded-sm">
                       <p className="font-body text-xs text-bronze">Zero-Emission Scope 3 Carbon Reporting Included</p>
                     </div>
+                    {formspreeState.errors && (
+                      <p className="font-body text-xs text-red-500">Something went wrong sending your request. Please try again.</p>
+                    )}
                     <div className="flex gap-3">
                       <button onClick={() => setStep(2)} className="px-6 border border-cacao/15 text-cacao py-4 font-body text-sm hover:bg-ivory luxury-transition rounded-sm">Back</button>
-                      <button onClick={submitBooking} disabled={!formData.name || !formData.email} className="flex-1 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2 disabled:opacity-30">
-                        Confirm Booking
+                      <button onClick={submitBooking} disabled={!formData.name || !formData.email || formspreeState.submitting} className="flex-1 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2 disabled:opacity-30">
+                        {formspreeState.submitting ? "Sending..." : "Confirm Booking"}
                         <ArrowRight size={16} />
                       </button>
                     </div>
