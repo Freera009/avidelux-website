@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, Globe, Car, Award, Calculator, MapPin, Calendar, Clock, CheckCircle, MapPinned } from "lucide-react";
+import { ArrowRight, Users, Globe, Car, Award, Calculator, MapPin, Calendar, Clock } from "lucide-react";
 import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import SectionReveal from "@/components/avidelux/SectionReveal";
@@ -50,11 +50,6 @@ const services = [
 export default function Services() {
   const [selectedClass, setSelectedClass] = useState(0);
   const [distance, setDistance] = useState(25);
-  const [showSummary, setShowSummary] = useState(false);
-  const [bookingConfirmed, setBookingConfirmed] = useState(false);
-  const [pickup, setPickup] = useState("");
-  const [dropoff, setDropoff] = useState("");
-  const [rideTime, setRideTime] = useState("now");
 
   const selected = vehicleClasses[selectedClass];
   const estimated = selected.basePrice + selected.perKm * distance;
@@ -160,76 +155,16 @@ export default function Services() {
                     </div>
                   </div>
 
-                  <button
-                    onClick={() => setShowSummary(true)}
+                  <Link
+                    to="/booking"
                     className="w-full bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2"
                   >
                     Book This Ride
                     <ArrowRight size={16} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </SectionReveal>
-
-            {showSummary && (
-              <SectionReveal>
-                <div className="bg-cream p-8 lg:p-10 rounded-sm mt-6">
-                  {bookingConfirmed ? (
-                    <div className="text-center py-8">
-                      <CheckCircle size={40} className="text-bronze mx-auto mb-4" />
-                      <h3 className="font-heading text-2xl font-semibold text-cacao mb-2">Chauffeur Requested</h3>
-                      <p className="font-body text-sm text-cacao/50 max-w-sm mx-auto">Your ride has been dispatched via our AI nodes. You'll receive confirmation and driver details shortly.</p>
-                      <button onClick={() => { setShowSummary(false); setBookingConfirmed(false); setPickup(""); setDropoff(""); }} className="mt-6 font-body text-sm text-bronze hover:text-cacao luxury-transition">Book another ride</button>
-                    </div>
-                  ) : (
-                    <>
-                      <div className="flex items-center gap-2 mb-6">
-                        <MapPinned size={20} className="text-bronze" />
-                        <h3 className="font-heading text-lg font-semibold text-cacao">Confirm Your Journey</h3>
-                      </div>
-                      <div className="grid grid-cols-2 gap-6 mb-6 pb-6 border-b border-cacao/10">
-                        <div>
-                          <p className="font-body text-xs text-cacao/40 mb-1">Vehicle Class</p>
-                          <p className="font-body text-sm font-medium text-cacao">{selected.name}</p>
-                        </div>
-                        <div>
-                          <p className="font-body text-xs text-cacao/40 mb-1">Distance</p>
-                          <p className="font-body text-sm font-medium text-cacao">{distance} km</p>
-                        </div>
-                        <div>
-                          <p className="font-body text-xs text-cacao/40 mb-1">Estimated Fare</p>
-                          <p className="font-heading text-xl font-bold text-cacao">€{estimated.toFixed(0)}</p>
-                        </div>
-                        <div>
-                          <p className="font-body text-xs text-cacao/40 mb-1">Carbon Impact</p>
-                          <p className="font-body text-sm font-medium text-bronze">0g CO₂ (Zero-emission)</p>
-                        </div>
-                      </div>
-                      <div className="space-y-4 mb-6">
-                        <input type="text" placeholder="Pickup location" value={pickup} onChange={(e) => setPickup(e.target.value)} className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition" />
-                        <input type="text" placeholder="Drop-off destination" value={dropoff} onChange={(e) => setDropoff(e.target.value)} className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition" />
-                        <select value={rideTime} onChange={(e) => setRideTime(e.target.value)} className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao focus:outline-none focus:border-bronze luxury-transition">
-                          <option value="now">Dispatch now (60s rapid)</option>
-                          <option value="1h">In 1 hour</option>
-                          <option value="3h">In 3 hours</option>
-                          <option value="tomorrow">Tomorrow morning</option>
-                          <option value="custom">Custom schedule</option>
-                        </select>
-                      </div>
-                      <div className="flex gap-3">
-                        <button onClick={() => setBookingConfirmed(true)} className="flex-1 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2">
-                          Confirm & Request Chauffeur
-                          <ArrowRight size={16} />
-                        </button>
-                        <button onClick={() => setShowSummary(false)} className="px-6 border border-cacao/15 text-cacao py-4 font-body text-sm hover:bg-ivory luxury-transition rounded-sm">
-                          Edit
-                        </button>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </SectionReveal>
-            )}
           </div>
         </div>
       </section>
