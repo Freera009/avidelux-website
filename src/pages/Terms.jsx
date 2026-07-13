@@ -16,7 +16,7 @@ const sections = [
     title: "2. Scope of services",
     paragraphs: ["Avidelux provides a B2B mobility platform offering:"],
     list: [
-      "Automated booking ingestion from corporate portals (Booking.com, CMAC, HBX, and others) via API, webhook, and email parsing",
+      "Automated booking ingestion from corporate portals via API, webhook, and email parsing",
       "Automated dispatch to partner taxi and fleet companies using a tiered cascade system",
       "SaaS dashboard for taxi and fleet operators including dispatch management, GPS tracking, driver management, vehicle management, and accounting",
       "Outbound booking confirmation and status updates to client portals",
