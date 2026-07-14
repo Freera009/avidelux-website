@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "@formspree/react";
 import { Mail, Phone, MapPin, Clock, ArrowRight, CheckCircle } from "lucide-react";
 import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
@@ -16,9 +17,20 @@ const contactInfo = [
 ];
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [formspreeState, submitContact] = useForm("xvzeoopb");
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const inputClass = "w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition";
+
+  const handleContactSubmit = (e) => {
+    e.preventDefault();
+    submitContact({
+      subject: `New Contact Message — ${form.name}`,
+      name: form.name,
+      email: form.email,
+      topic: form.subject,
+      message: form.message,
+    });
+  };
 
   return (
     <PageTransition>
@@ -72,22 +84,21 @@ export default function Contact() {
             {/* Contact Form */}
             <SectionReveal delay={0.1}>
               <div className="bg-cream p-8 lg:p-10 rounded-sm">
-                {submitted ? (
+                {formspreeState.succeeded ? (
                   <div className="text-center py-12">
                     <CheckCircle size={40} className="text-bronze mx-auto mb-4" />
                     <h3 className="font-heading text-xl font-semibold text-cacao mb-2">Message Sent</h3>
                     <p className="font-body text-sm text-cacao/50 mb-6">Our concierge team will respond within 2 hours.</p>
-                    <button onClick={() => { setSubmitted(false); setForm({ name: "", email: "", subject: "", message: "" }); }} className="font-body text-sm text-bronze hover:text-cacao luxury-transition">Send another</button>
                   </div>
                 ) : (
-                  <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="space-y-6">
+                  <form onSubmit={handleContactSubmit} className="space-y-6">
                     <h3 className="font-heading text-lg font-semibold text-cacao mb-2">Send us a message</h3>
                     <input type="text" required placeholder="Full Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inputClass} />
                     <input type="email" required placeholder="Email Address" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={inputClass} />
                     <input type="text" placeholder="Subject" value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })} className={inputClass} />
                     <textarea required placeholder="Your message" rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className={inputClass + " resize-none"} />
-                    <button type="submit" className="w-full bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2">
-                      Send Message
+                    <button type="submit" disabled={formspreeState.submitting} className="w-full bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2 disabled:opacity-30">
+                      {formspreeState.submitting ? "Sending..." : "Send Message"}
                       <ArrowRight size={16} />
                     </button>
                   </form>

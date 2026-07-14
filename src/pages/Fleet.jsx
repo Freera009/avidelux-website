@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Phone, Mail } from "lucide-react";
+import { useForm } from "@formspree/react";
+import { ArrowRight, Phone, Mail, CheckCircle } from "lucide-react";
 import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import FleetCard from "@/components/avidelux/FleetCard";
@@ -57,6 +58,20 @@ const fleetVehicles = [
 ];
 
 export default function Fleet() {
+  const [consultState, submitConsult] = useForm("xvzeoopb");
+  const [consultForm, setConsultForm] = useState({ name: "", email: "", company: "", vehicleClass: "" });
+
+  const handleConsultSubmit = (e) => {
+    e.preventDefault();
+    submitConsult({
+      subject: `New B2B Fleet Consultation Request — ${consultForm.company || consultForm.name}`,
+      name: consultForm.name,
+      email: consultForm.email,
+      company: consultForm.company,
+      preferredVehicleClass: consultForm.vehicleClass,
+    });
+  };
+
   return (
     <PageTransition>
       <SEO
@@ -171,36 +186,57 @@ export default function Fleet() {
 
             <SectionReveal delay={0.1}>
               <div className="bg-ivory p-8 lg:p-10 rounded-sm">
-                <div className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Corporate Email"
-                    className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Company Name"
-                    className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition"
-                  />
-                  <select className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao/30 focus:outline-none focus:border-bronze luxury-transition">
-                    <option value="">Preferred Vehicle Class</option>
-                    <option value="first">First Class</option>
-                    <option value="business">Business Class</option>
-                    <option value="sedan">Luxury Sedan</option>
-                    <option value="suv">Premium SUV</option>
-                    <option value="airport">Airport Express</option>
-                    <option value="executive">Executive Class</option>
-                  </select>
-                  <button className="w-full mt-6 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2">
-                    Request Consultation
-                    <ArrowRight size={16} />
-                  </button>
-                </div>
+                {consultState.succeeded ? (
+                  <div className="text-center py-8">
+                    <CheckCircle size={40} className="text-bronze mx-auto mb-4" />
+                    <h3 className="font-heading text-xl font-semibold text-cacao mb-2">Request Received</h3>
+                    <p className="font-body text-sm text-cacao/50">Our corporate account team will be in touch shortly.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleConsultSubmit} className="space-y-4">
+                    <input
+                      type="text"
+                      required
+                      placeholder="Full Name"
+                      value={consultForm.name}
+                      onChange={(e) => setConsultForm({ ...consultForm, name: e.target.value })}
+                      className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition"
+                    />
+                    <input
+                      type="email"
+                      required
+                      placeholder="Corporate Email"
+                      value={consultForm.email}
+                      onChange={(e) => setConsultForm({ ...consultForm, email: e.target.value })}
+                      className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition"
+                    />
+                    <input
+                      type="text"
+                      required
+                      placeholder="Company Name"
+                      value={consultForm.company}
+                      onChange={(e) => setConsultForm({ ...consultForm, company: e.target.value })}
+                      className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao placeholder:text-cacao/30 focus:outline-none focus:border-bronze luxury-transition"
+                    />
+                    <select
+                      value={consultForm.vehicleClass}
+                      onChange={(e) => setConsultForm({ ...consultForm, vehicleClass: e.target.value })}
+                      className="w-full bg-transparent border-b border-cacao/15 py-3 font-body text-sm text-cacao/30 focus:outline-none focus:border-bronze luxury-transition"
+                    >
+                      <option value="">Preferred Vehicle Class</option>
+                      <option value="first">First Class</option>
+                      <option value="business">Business Class</option>
+                      <option value="sedan">Luxury Sedan</option>
+                      <option value="suv">Premium SUV</option>
+                      <option value="airport">Airport Express</option>
+                      <option value="executive">Executive Class</option>
+                    </select>
+                    <button type="submit" disabled={consultState.submitting} className="w-full mt-6 bg-cacao text-ivory py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm flex items-center justify-center gap-2 disabled:opacity-30">
+                      {consultState.submitting ? "Sending..." : "Request Consultation"}
+                      <ArrowRight size={16} />
+                    </button>
+                  </form>
+                )}
 
                 <div className="flex items-center gap-6 mt-8 pt-6 border-t border-cacao/10">
                   <a href="tel:+4915224001111" className="flex items-center gap-2 font-body text-xs text-cacao/40 hover:text-bronze luxury-transition">
