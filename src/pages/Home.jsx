@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Zap, Shield, Clock, MessageCircle } from "lucide-react";
 import Navbar from "@/components/avidelux/Navbar";
 import Footer from "@/components/avidelux/Footer";
 import FleetCard from "@/components/avidelux/FleetCard";
+import Hero from "@/components/avidelux/Hero";
 import SectionReveal from "@/components/avidelux/SectionReveal";
 import ScrollToast from "@/components/avidelux/ScrollToast";
 import PageTransition from "@/components/avidelux/PageTransition";
@@ -40,10 +40,6 @@ const fleetData = [
 ];
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const heroScale = useTransform(scrollYProgress, [0, 0.15], [1, 1.05]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0.6]);
-
   return (
     <PageTransition>
       <SEO
@@ -53,70 +49,8 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="min-h-screen flex flex-col justify-center pt-20 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
-          <SectionReveal>
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-8">
-              AI-Powered Luxury Ground Travel
-            </p>
-          </SectionReveal>
-
-          <h1
-            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-cacao leading-[1.05] max-w-5xl"
-            style={{ perspective: 800 }}
-          >
-            {"Next-generation dispatch, powered by AI".split(" ").map((word, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, rotateX: -100, y: 30 }}
-                animate={{ opacity: 1, rotateX: 0, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.15 + i * 0.06, ease: [0.19, 1, 0.22, 1] }}
-                style={{ display: "inline-block", transformOrigin: "50% 100%", marginRight: "0.25em" }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </h1>
-
-          <SectionReveal delay={0.2}>
-            <p className="font-body text-base md:text-lg text-cacao/50 max-w-lg mt-8 leading-relaxed">
-              Automated dispatch technology connecting licensed, independently owned partner fleets across Germany, with sixty-second average dispatch times.
-            </p>
-          </SectionReveal>
-
-          <SectionReveal delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4 mt-10">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 bg-cacao text-ivory px-8 py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm"
-              >
-                Request a Ride
-                <ArrowRight size={16} />
-              </Link>
-              <Link
-                to="/fleet"
-                className="inline-flex items-center gap-2 border border-cacao/20 text-cacao px-8 py-4 font-body text-sm font-medium tracking-wide hover:bg-cream luxury-transition rounded-sm"
-              >
-                Explore Fleet
-              </Link>
-            </div>
-          </SectionReveal>
-        </div>
-
-        <SectionReveal delay={0.4} className="mt-16 lg:mt-20">
-          <motion.div
-            style={{ scale: heroScale, opacity: heroOpacity }}
-            className="max-w-7xl mx-auto px-6 lg:px-12 w-full"
-          >
-            <div className="rounded-sm overflow-hidden">
-              <img
-                src={HERO_IMG}
-                alt="Luxury black sedan on urban boulevard at golden hour"
-                className="w-full h-[50vh] lg:h-[65vh] object-cover"
-              />
-            </div>
-          </motion.div>
-        </SectionReveal>
+      <section className="pt-20">
+        <Hero />
       </section>
 
       {/* Mid Section */}
