@@ -16,7 +16,7 @@ const faqSections = [
     title: "Account & Getting Started",
     items: [
       {
-        q: "How do I create an AviDelux corporate account?",
+        q: "How do I create an Avidelux corporate account?",
         a: "Visit our Services page or contact our enterprise team directly. We'll set up your corporate profile, configure travel policies, and integrate with your existing travel management platform within 48 hours.",
       },
       {
@@ -33,8 +33,8 @@ const faqSections = [
     title: "Booking & Dispatch",
     items: [
       {
-        q: "How does AI-powered dispatch work?",
-        a: "Our autonomous AI nodes analyze real-time traffic, weather, driver availability, and your pickup location to dispatch the nearest qualified chauffeur within 60 seconds. The system continuously optimizes routing for the fastest, smoothest journey.",
+        q: "How does automated dispatch work?",
+        a: "Our automated dispatch system analyzes real-time traffic, weather, partner availability, and your pickup location to route your trip to the nearest qualified licensed partner within 60 seconds. The system continuously optimizes routing for the fastest, smoothest journey.",
       },
       {
         q: "Can I pre-book rides in advance?",
@@ -46,7 +46,7 @@ const faqSections = [
       },
       {
         q: "Do you offer airport meet-and-greet services?",
-        a: "Yes. Our chauffeurs monitor your flight in real-time, arrive at the terminal with a personalized name board, and assist with luggage. This service is complimentary for all First Class bookings.",
+        a: "Yes. Partner chauffeurs monitor your flight in real-time, arrive at the terminal with a personalized name board, and assist with luggage. This service is complimentary for all First Class bookings.",
       },
     ],
   },
@@ -54,8 +54,8 @@ const faqSections = [
     title: "Fleet & Sustainability",
     items: [
       {
-        q: "What types of vehicles are in your fleet?",
-        a: "Our fleet includes First Class (Mercedes-Maybach S-Class), Business Class (Mercedes S-Class), Luxury Sedan (Lucid Air Grand Touring), and Premium SUV (Electric Luxury SUV). All vehicles are under 18 months old and 100% electric or hybrid.",
+        q: "What types of vehicles are available through the network?",
+        a: "The Avidelux partner network includes First Class (Mercedes-Maybach S-Class), Business Class (Mercedes S-Class), Luxury Sedan (Lucid Air Grand Touring), and Premium SUV (Electric Luxury SUV). All partner vehicles are under 18 months old and 100% electric or hybrid.",
       },
       {
         q: "How does Scope 3 carbon reporting work?",
@@ -63,7 +63,7 @@ const faqSections = [
       },
       {
         q: "What amenities are included in the vehicles?",
-        a: "All vehicles include complimentary Wi-Fi, bottled water, device charging, and premium leather interiors. First Class vehicles additionally offer champagne service, privacy partitions, and a dedicated personal host.",
+        a: "All partner vehicles include complimentary Wi-Fi, bottled water, device charging, and premium leather interiors. First Class vehicles additionally offer champagne service, privacy partitions, and a dedicated personal host.",
       },
     ],
   },
@@ -116,7 +116,7 @@ export default function FAQ() {
     <PageTransition>
       <SEO
         title="Frequently Asked Questions"
-        description="Answers to common questions about AviDelux chauffeur services, booking, fleet, pricing, and coverage areas."
+        description="Answers to common questions about Avidelux's dispatch platform, booking, partner fleet, pricing, and coverage areas."
         path="/faq"
       />
       <Navbar />
@@ -135,7 +135,7 @@ export default function FAQ() {
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-6 max-w-lg mx-auto">
-              Everything you need to know about AviDelux's AI-powered luxury ground travel platform.
+              Everything you need to know about Avidelux's automated dispatch platform.
             </p>
           </SectionReveal>
         </div>

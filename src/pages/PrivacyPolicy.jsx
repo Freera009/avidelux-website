@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
     <PageTransition>
       <SEO
         title="Privacy Policy"
-        description="Read the AviDelux GDPR/DSGVO-compliant privacy policy to learn how Freera UG collects, uses, and protects your personal data."
+        description="Read the Avidelux GDPR/DSGVO-compliant privacy policy to learn how Freera UG collects, uses, and protects your personal data."
         path="/privacy-policy"
       />
       <Navbar />

@@ -26,7 +26,7 @@ const sections = [
   {
     title: "3. B2B only — no consumer services",
     paragraphs: [
-      "Avidelux operates exclusively in a B2B capacity. All services are provided to registered businesses. Avidelux is not a taxi company, does not own vehicles, and does not employ drivers. We act as a technology broker and dispatch platform.",
+      "Avidelux operates exclusively in a B2B capacity. All services are provided to registered businesses. Avidelux is not a taxi company, does not own vehicles, and does not employ drivers. We provide the technology platform for automated dispatch and fleet management, connecting bookings to independently owned, licensed fleet partners.",
     ],
   },
   {
@@ -132,7 +132,7 @@ export default function Terms() {
     <PageTransition>
       <SEO
         title="Terms & Conditions"
-        description="Terms & Conditions governing the use of the AviDelux B2B mobility platform and services, operated by Freera UG (haftungsbeschränkt)."
+        description="Terms & Conditions governing the use of the Avidelux B2B dispatch and fleet management platform, operated by Freera UG (haftungsbeschränkt)."
         path="/terms"
       />
       <Navbar />

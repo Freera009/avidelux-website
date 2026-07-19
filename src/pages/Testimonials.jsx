@@ -14,8 +14,8 @@ export default function Testimonials() {
   return (
     <PageTransition>
       <SEO
-        title="Client Journals & Executive Reviews"
-        description="Read verified experiences from global business leaders, corporate travel managers, and discerning private clients who rely on AviDelux's logistics daily."
+        title="Built for Business Travel"
+        description="Avidelux's dispatch platform is trusted by business leaders and corporate travel managers who rely on our licensed partner network daily."
         path="/testimonials"
       />
       <Navbar />
@@ -27,12 +27,12 @@ export default function Testimonials() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              The AviDelux Standard: Executive Reviews
+              The Avidelux Standard: Built for Business Travel
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              Read verified experiences from global business leaders, corporate travel managers, and discerning private clients who rely on our logistics daily.
+              Trusted by business leaders and corporate travel managers who rely on our licensed partner network daily.
             </p>
           </SectionReveal>
         </div>
@@ -61,12 +61,12 @@ export default function Testimonials() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <SectionReveal>
             <h2 className="font-heading text-3xl md:text-4xl font-semibold text-ivory leading-tight max-w-xl mx-auto">
-              Join 52,000+ professionals who trust AviDelux
+              Join the professionals who trust Avidelux
             </h2>
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <Link to="/booking" className="inline-flex items-center gap-2 bg-bronze text-ivory px-8 py-4 font-body text-sm font-medium tracking-wide hover:bg-bronze/80 luxury-transition rounded-sm mt-8">
-              Book Your First Ride
+              Request Your First Ride
               <ArrowRight size={16} />
             </Link>
           </SectionReveal>

@@ -121,7 +121,7 @@ export default function Navbar() {
               to="/booking"
               className="bg-cacao text-ivory px-6 py-2.5 text-sm font-body font-medium tracking-wide hover:bg-espresso luxury-transition rounded-full"
             >
-              Book Now
+              Request a Ride
             </Link>
           </div>
 
@@ -161,7 +161,7 @@ export default function Navbar() {
                 to="/booking"
                 className="bg-cacao text-ivory px-6 py-3 text-center text-sm font-body font-medium tracking-wide rounded-full mt-2"
               >
-                Book Now
+                Request a Ride
               </Link>
             </div>
           </motion.div>

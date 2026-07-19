@@ -19,7 +19,7 @@ const tiers = [
     desc: "For the discerning executive.",
     features: [
       "Priority dispatch (30s average)",
-      "10% discount on all rides",
+      "10% volume discount on trip fees",
       "Dedicated account manager",
       "Monthly ride summary reports",
       "Standard vehicle selection",
@@ -34,7 +34,7 @@ const tiers = [
     desc: "For the frequent global traveler.",
     features: [
       "Priority dispatch (15s average)",
-      "20% discount on all rides",
+      "20% volume discount on trip fees",
       "Senior account manager",
       "Quarterly business review",
       "First Class vehicle access",
@@ -51,13 +51,13 @@ const tiers = [
     desc: "For the elite few. Unlimited.",
     features: [
       "Instant dispatch (5s average)",
-      "30% discount on all rides",
-      "24/7 dedicated concierge",
+      "30% volume discount on trip fees",
+      "24/7 dedicated account support",
       "Vehicle preference guarantee",
       "Maybach & Lucid Air access",
-      "Global priority in all 200+ cities",
+      "Priority dispatch across our full German network",
       "Full CSRD compliance suite",
-      "Private jet coordination",
+      "Ground transport coordination for private aviation arrivals",
       "Custom billing & invoicing",
     ],
     accent: false,
@@ -68,8 +68,8 @@ export default function Membership() {
   return (
     <PageTransition>
       <SEO
-        title="Membership"
-        description="Join AviDelux Membership for priority booking, exclusive rates, and dedicated concierge support with every luxury transfer."
+        title="Corporate Account Tiers"
+        description="Avidelux corporate account tiers offer priority dispatch, volume-based rates, and dedicated account support for growing business travel programs."
         path="/membership"
       />
       <Navbar />
@@ -77,16 +77,16 @@ export default function Membership() {
       <section className="pt-32 pb-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <SectionReveal>
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-6">Membership Program</p>
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-6">Corporate Account Program</p>
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              Privileges for the most loyal
+              Tiers built for growing corporate accounts
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              Exclusive tiers designed for our most valued corporate clients. Priority dispatch, dedicated concierge, and access to our rarest vehicles.
+              Tiers designed for our most valued corporate clients. Priority dispatch, dedicated account support, and access to our full partner vehicle network.
             </p>
           </SectionReveal>
         </div>
@@ -106,9 +106,9 @@ export default function Membership() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <SectionReveal>
             <div className="text-center mb-16">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">Membership Tiers</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">Account Tiers</p>
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-cacao leading-tight">
-                Choose your level of privilege
+                Choose your account tier
               </h2>
             </div>
           </SectionReveal>
@@ -152,17 +152,17 @@ export default function Membership() {
           <SectionReveal>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div>
-                <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">Exclusive Perks</p>
+                <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">Account Benefits</p>
                 <h2 className="font-heading text-3xl md:text-4xl font-semibold text-cacao leading-tight mb-6">
                   Beyond transportation
                 </h2>
                 <p className="font-body text-base text-cacao/50 leading-relaxed mb-8">
-                  Membership unlocks a world of privileges that extend far beyond the ride itself. From private jet coordination to custom billing, we anticipate every need.
+                  Corporate accounts unlock benefits that extend far beyond the trip itself. From private aviation ground coordination to custom billing, we anticipate every need.
                 </p>
                 <div className="space-y-4">
                   {[
                     "Guaranteed vehicle availability during peak demand",
-                    "Personal chauffeur preference and recall",
+                    "Partner chauffeur preference and recall",
                     "Custom routes and saved destinations",
                     "White-glove event coordination",
                     "Complimentary upgrades to First Class",

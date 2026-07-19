@@ -14,23 +14,23 @@ const INTERIOR_IMG = "/images/7118d11e4_generated_fea8ad00.png";
 const requirements = [
   { icon: Shield, title: "License & Insurance", desc: "Valid Local Chauffeur/Limousine License & Commercial Passenger Insurance." },
   { icon: Globe, title: "Multilingual Proficiency", desc: "Fluency in English plus the local language is mandatory." },
-  { icon: Award, title: "Black-Tie Protocol", desc: "Strict adherence to the AviDelux Black-Tie Dress Code & Protocol." },
+  { icon: Award, title: "Black-Tie Protocol", desc: "Strict adherence to the Avidelux Black-Tie Dress Code & Protocol." },
 ];
 
 const benefits = [
-  "Industry-leading compensation",
+  "Competitive, transparent trip payouts",
   "Flexible scheduling—choose your hours",
   "Premium vehicle training provided",
-  "Health & dental insurance",
+  "Partner support and account assistance",
   "Performance bonuses",
-  "Career advancement pathways",
+  "Network growth opportunities",
 ];
 
 const positions = [
-  { title: "Executive Chauffeur", location: "London · Paris · Zurich", type: "Full-time" },
-  { title: "Airport Specialist", location: "New York · Dubai · Singapore", type: "Full-time" },
-  { title: "Event Transport Lead", location: "Multiple cities", type: "Contract" },
-  { title: "Fleet Operations Manager", location: "London HQ", type: "Full-time" },
+  { title: "Executive Chauffeur", location: "Frankfurt · Munich · Hamburg", type: "Contract" },
+  { title: "Airport Specialist", location: "Frankfurt · Düsseldorf · Berlin", type: "Contract" },
+  { title: "Event Transport Lead", location: "Multiple German cities", type: "Contract" },
+  { title: "Fleet Operations Manager", location: "Mülheim an der Ruhr HQ", type: "Full-time" },
 ];
 
 export default function Careers() {
@@ -55,7 +55,7 @@ export default function Careers() {
     <PageTransition>
       <SEO
         title="Careers"
-        description="Explore career opportunities at AviDelux and join a team dedicated to premium chauffeur service and luxury hospitality."
+        description="Explore opportunities to join Avidelux's licensed partner network across Germany, dedicated to premium ground transport and luxury hospitality."
         path="/careers"
       />
       <Navbar />
@@ -67,12 +67,12 @@ export default function Careers() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              Join Europe's Most Elite Chauffeur Network
+              Join Germany's Most Trusted Dispatch Network
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              We do not hire gig-workers or casual drivers. At AviDelux, we contract exclusively with certified professional chauffeurs who view ground logistics as an elite profession. If you own a pristine, late-model executive vehicle (Mercedes-Benz E/S Class, V-Class, or equivalent) and possess flawless professional driving credentials, immaculate protocol training, and local geographical expertise, we invite you to apply to our supplier network.
+              We do not work with gig-workers or casual drivers. Avidelux partners exclusively with certified professional chauffeurs and licensed operators who view ground logistics as an elite profession. If you own a pristine, late-model executive vehicle (Mercedes-Benz E/S Class, V-Class, or equivalent) and possess flawless professional driving credentials, immaculate protocol training, and local geographical expertise, we invite you to apply to our partner network.
             </p>
           </SectionReveal>
         </div>
@@ -82,7 +82,7 @@ export default function Careers() {
       <SectionReveal>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-24">
           <div className="rounded-sm overflow-hidden">
-            <img src={CHAUFFEUR_IMG} alt="Professional AviDelux chauffeur in bespoke suit" className="w-full h-[40vh] lg:h-[55vh] object-cover" />
+            <img src={CHAUFFEUR_IMG} alt="Professional Avidelux partner chauffeur in bespoke suit" className="w-full h-[40vh] lg:h-[55vh] object-cover" />
           </div>
         </div>
       </SectionReveal>

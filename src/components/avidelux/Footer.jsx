@@ -57,7 +57,7 @@ export default function Footer() {
               <div>
                 <Logo size={36} light />
                 <p className="font-body text-sm text-ivory/50 mt-4 leading-relaxed">
-                  Next-generation chauffeur services, dispatched by autonomous AI nodes.
+                  The automated dispatch and fleet management platform for independently owned, licensed taxi and chauffeur companies across Germany.
                 </p>
               </div>
 
@@ -90,7 +90,7 @@ export default function Footer() {
         <div className="border-t border-ivory/5">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-body text-xs text-ivory/30">
-              © 2026 AviDelux. All rights reserved. Zero-fleet. Zero-emission. Pure intelligence.
+              © 2026 Avidelux, a brand of Freera UG (haftungsbeschränkt) · Mülheim an der Ruhr, Germany · VAT DE369532975
             </p>
             <p className="font-body text-xs text-ivory/30">
               Zero-Emission Scope 3 Carbon Reporting Included

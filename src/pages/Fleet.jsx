@@ -76,7 +76,7 @@ export default function Fleet() {
     <PageTransition>
       <SEO
         title="Our Luxury Fleet"
-        description="Explore AviDelux's luxury fleet, including the Mercedes-Maybach S-Class, Mercedes S-Class, Lucid Air, Cadillac Escalade IQ, and premium electric SUVs."
+        description="Explore the vehicle classes available through Avidelux's partner network, including the Mercedes-Maybach S-Class, Mercedes S-Class, Lucid Air, Cadillac Escalade IQ, and premium electric SUVs."
         path="/fleet"
       />
       <Navbar />

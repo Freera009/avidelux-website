@@ -20,7 +20,7 @@ export default function Imprint() {
     <PageTransition>
       <SEO
         title="Imprint"
-        description="Legal disclosure (Impressum) for AviDelux, operated by Freera UG (haftungsbeschränkt), pursuant to § 5 TMG / § 5 DDG."
+        description="Legal disclosure (Impressum) for Avidelux, operated by Freera UG (haftungsbeschränkt), pursuant to § 5 TMG / § 5 DDG."
         path="/imprint"
       />
       <Navbar />

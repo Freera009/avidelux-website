@@ -1,7 +1,7 @@
 {
-  "name": "AviDelux — Premium Chauffeur Service",
-  "short_name": "AviDelux",
-  "description": "Premium chauffeur services and luxury vehicle transfers worldwide.",
+  "name": "Avidelux — B2B Dispatch & Fleet Platform",
+  "short_name": "Avidelux",
+  "description": "Automated dispatch and fleet management platform for independently owned, licensed taxi and chauffeur companies across Germany.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FBF7EC",

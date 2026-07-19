@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <PageTransition>
       <SEO
-        description="AviDelux delivers premium chauffeur services and luxury vehicle transfers worldwide — professional, discreet, and reliable transportation for every occasion."
+        description="Avidelux is the automated dispatch and fleet management platform connecting independently owned, licensed taxi and chauffeur companies across Germany — one system for booking, GPS tracking, and GoBD-compliant invoicing."
         path="/"
       />
       <Navbar />
@@ -65,7 +65,7 @@ export default function Home() {
             className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-cacao leading-[1.05] max-w-5xl"
             style={{ perspective: 800 }}
           >
-            {"Next-generation chauffeur, dispatched by AI".split(" ").map((word, i) => (
+            {"Next-generation dispatch, powered by AI".split(" ").map((word, i) => (
               <motion.span
                 key={i}
                 initial={{ opacity: 0, rotateX: -100, y: 30 }}
@@ -80,7 +80,7 @@ export default function Home() {
 
           <SectionReveal delay={0.2}>
             <p className="font-body text-base md:text-lg text-cacao/50 max-w-lg mt-8 leading-relaxed">
-              Autonomous dispatch nodes. Zero-emission fleet. Sixty-second response times across 200+ global markets.
+              Automated dispatch technology connecting licensed, independently owned partner fleets across Germany, with sixty-second average dispatch times.
             </p>
           </SectionReveal>
 
@@ -90,7 +90,7 @@ export default function Home() {
                 to="/services"
                 className="inline-flex items-center gap-2 bg-cacao text-ivory px-8 py-4 font-body text-sm font-medium tracking-wide hover:bg-espresso luxury-transition rounded-sm"
               >
-                Book Your Ride
+                Request a Ride
                 <ArrowRight size={16} />
               </Link>
               <Link
@@ -132,7 +132,7 @@ export default function Home() {
                   Intelligent rides. Unmatched precision.
                 </h2>
                 <p className="font-body text-base text-cacao/50 mt-6 leading-relaxed max-w-md">
-                  Our autonomous AI nodes analyze traffic patterns, weather conditions, and real-time demand to dispatch the perfect vehicle within sixty seconds. Zero-fleet ownership. Zero compromise.
+                  Our automated dispatch technology analyzes traffic patterns, weather conditions, and real-time demand to route each trip to the best-positioned licensed partner within sixty seconds. Zero fleet ownership. Zero compromise.
                 </p>
                 <p className="font-body text-sm text-bronze mt-4">
                   Zero-Emission Scope 3 Carbon Reporting Included
@@ -145,7 +145,7 @@ export default function Home() {
                 <div className="rounded-sm overflow-hidden">
                   <img
                     src={LIFESTYLE_IMG}
-                    alt="Professional chauffeur at airport tarmac"
+                    alt="Licensed partner chauffeur at airport tarmac"
                     className="w-full h-64 lg:h-80 object-cover hover:scale-105 luxury-transition"
                   />
                 </div>
@@ -186,9 +186,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-3 gap-12 text-center">
             {[
-              { value: "99.8%", label: "Unmatched platform reliability", icon: Shield },
-              { value: "1.2M", label: "Rides delivered globally", icon: Zap },
-              { value: "60s", label: "Rapid dispatch average", icon: Clock },
+              { value: "0", label: "Vehicles owned directly", icon: Shield },
+              { value: "100%", label: "Licensed & insured partners", icon: Zap },
+              { value: "60s", label: "Average dispatch time", icon: Clock },
             ].map((stat, i) => (
               <SectionReveal key={i} delay={i * 0.1}>
                 <div className="flex flex-col items-center">
@@ -248,7 +248,7 @@ export default function Home() {
               Need a ride now?
             </p>
             <p className="font-body text-xs text-ivory/60 leading-relaxed">
-              Tap to book instantly via our WhatsApp AI Agent. Your personal concierge is ready.
+              Message us on WhatsApp to connect with a partner dispatch team.
             </p>
             <a
               href="https://wa.me/4915224001111"

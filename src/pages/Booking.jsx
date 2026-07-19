@@ -76,8 +76,8 @@ export default function Booking() {
   return (
     <PageTransition>
       <SEO
-        title="Book Your Chauffeur"
-        description="Book a luxury chauffeur with AviDelux in minutes — choose your vehicle class, date, and destination for a seamless premium transfer."
+        title="Request a Ride"
+        description="Submit a ride request through Avidelux's dispatch platform — select a vehicle class, date, and destination, and we'll route your trip to a licensed local partner."
         path="/booking"
       />
       <Navbar />
@@ -94,7 +94,7 @@ export default function Booking() {
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              Configure your ride with precision. Our AI dispatch node will assign the optimal chauffeur within 60 seconds of confirmation.
+              Configure your trip with precision. Our automated dispatch system will route your request to the best-positioned licensed partner within 60 seconds of confirmation.
             </p>
           </SectionReveal>
         </div>
@@ -108,7 +108,7 @@ export default function Booking() {
                 <CheckCircle size={48} className="text-bronze mx-auto mb-6" />
                 <h2 className="font-heading text-2xl md:text-3xl font-semibold text-cacao mb-3">Booking Request Sent</h2>
                 <p className="font-body text-sm text-cacao/50 max-w-sm mx-auto mb-8">
-                  Your request has been sent to our concierge team. We'll confirm your chauffeur at {formData.email} shortly.
+                  Your request has been sent to our dispatch team. A licensed partner will confirm your trip at {formData.email} shortly.
                 </p>
                 <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-8 text-left">
                   <div>
@@ -124,8 +124,8 @@ export default function Booking() {
                     <p className="font-body text-sm text-cacao">{formData.date || "ASAP"} {formData.time}</p>
                   </div>
                   <div>
-                    <p className="font-body text-xs text-cacao/40">Carbon Impact</p>
-                    <p className="font-body text-sm text-bronze">0g CO₂</p>
+                    <p className="font-body text-xs text-cacao/40">Carbon Reporting</p>
+                    <p className="font-body text-sm text-bronze">Included</p>
                   </div>
                 </div>
                 <button onClick={bookAnotherRide} className="font-body text-sm text-bronze hover:text-cacao luxury-transition">

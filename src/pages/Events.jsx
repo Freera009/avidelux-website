@@ -14,7 +14,7 @@ const COASTAL_IMG = "/images/df3b79dfd_generated_d50a62bb.png";
 const eventTypes = [
   { icon: Heart, title: "Weddings", desc: "Bespoke bridal cars, guest shuttles, and seamless logistics for your perfect day. White-glove service from ceremony to reception." },
   { icon: Wine, title: "Wine Tours", desc: "Curated vineyard journeys in chauffeur-driven luxury. Multi-stop itineraries through the world's finest wine regions." },
-  { icon: Building2, title: "Corporate Events", desc: "Conferences, galas, board meetings. Dedicated fleet allocation with on-site coordination and real-time tracking." },
+  { icon: Building2, title: "Corporate Events", desc: "Conferences, galas, board meetings. Dedicated partner fleet allocation with on-site coordination and real-time tracking." },
   { icon: Music, title: "Social Gatherings", desc: "Galas, premieres, and high-profile social events. Discreet, punctual, and impeccably presented." },
 ];
 
@@ -40,8 +40,8 @@ export default function Events() {
   return (
     <PageTransition>
       <SEO
-        title="Event Chauffeur Services"
-        description="Arrive in style with AviDelux event chauffeur services for weddings, galas, corporate functions, and special occasions."
+        title="Event Transport"
+        description="Avidelux coordinates ground transport for weddings, galas, corporate functions, and special occasions by dispatching bookings to licensed local partner fleets."
         path="/events"
       />
       <Navbar />
@@ -58,7 +58,7 @@ export default function Events() {
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              Managing logistics for large-scale events requires precision planning, bulletproof communication, and robust capacity. AviDelux provides dedicated on-site logistics coordinators and specialized fleet deployment (including Mercedes-Benz V-Class luxury MPVs and premium executive minibuses) for diplomatic summits, corporate annual meetings, IPO roadshows, and exclusive private events. We handle route optimization, real-time chauffeur positioning, and dynamic schedule adjustments so your event logistics run like clockwork.
+              Managing logistics for large-scale events requires precision planning, bulletproof communication, and robust capacity. Avidelux's dispatch platform coordinates on-site logistics and specialized partner fleet deployment (including Mercedes-Benz V-Class luxury MPVs and premium executive minibuses) for corporate annual meetings, roadshows, and exclusive private events. We handle route optimization, real-time partner positioning, and dynamic schedule adjustments so your event logistics run like clockwork.
             </p>
           </SectionReveal>
         </div>

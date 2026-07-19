@@ -13,24 +13,24 @@ const INTERIOR_IMG = "/images/7118d11e4_generated_fea8ad00.png";
 
 const values = [
   { icon: Shield, title: "Discretion", desc: "Absolute confidentiality for every client, every journey. Your privacy is sacred." },
-  { icon: Leaf, title: "Sustainability", desc: "100% zero-emission fleet with full Scope 3 carbon reporting for CSRD compliance." },
-  { icon: Award, title: "Excellence", desc: "Vehicles under 18 months old. Chauffeurs trained in luxury hospitality. No compromise." },
-  { icon: Heart, title: "Human Touch", desc: "AI dispatches the ride. Humans deliver the experience. Technology serves, never replaces." },
+  { icon: Leaf, title: "Sustainability", desc: "Partner fleets moving toward zero-emission vehicles, with full Scope 3 carbon reporting for CSRD compliance built into the platform." },
+  { icon: Award, title: "Excellence", desc: "Partner vehicles under 18 months old. Partner chauffeurs held to strict hospitality standards. No compromise." },
+  { icon: Heart, title: "Human Touch", desc: "AI dispatches the trip. Partner chauffeurs deliver the experience. Technology serves, never replaces." },
 ];
 
 const timeline = [
-  { year: "2019", title: "The Vision", desc: "Founded in London with a radical idea: luxury ground travel dispatched by AI, not call centers." },
-  { year: "2021", title: "Zero-Emission Pledge", desc: "Transitioned to a 100% electric and hybrid fleet. First in the industry to include Scope 3 reporting." },
-  { year: "2023", title: "Global Expansion", desc: "Expanded to 200+ markets across five continents with consistent service quality." },
-  { year: "2026", title: "Autonomous Dispatch", desc: "Launched autonomous AI dispatch nodes delivering 60-second rapid response globally." },
+  { year: "2019", title: "The Vision", desc: "Founded in Germany with a radical idea: automated dispatch technology for independently owned taxi and chauffeur companies, replacing manual call-center coordination." },
+  { year: "2021", title: "Emissions Reporting", desc: "Introduced per-trip Scope 3 carbon reporting, now used by partners and corporate clients for CSRD compliance." },
+  { year: "2023", title: "Germany-Wide Growth", desc: "Expanded partner coverage across major German business hubs, from Frankfurt to Berlin." },
+  { year: "2026", title: "Platform Maturity", desc: "Refined automated dispatch to deliver sixty-second average response times for partner-fulfilled trips." },
 ];
 
 export default function About() {
   return (
     <PageTransition>
       <SEO
-        title="About AviDelux"
-        description="Learn about AviDelux's commitment to premium chauffeur service, professional drivers, and a luxury fleet built around discretion and reliability."
+        title="About Avidelux"
+        description="Learn how Avidelux's dispatch and fleet management platform connects independently owned, licensed taxi and chauffeur companies across Germany under one automated, GoBD-compliant system."
         path="/about"
       />
       <Navbar />
@@ -47,7 +47,7 @@ export default function About() {
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              We are a zero-fleet luxury ground travel platform. Autonomous AI nodes dispatch premium vehicles within 60 seconds. Every ride is zero-emission. Every detail is impeccable.
+              We are a zero-fleet B2B technology platform. Our automated dispatch system routes each trip to a vetted, independently owned partner within 60 seconds — with GPS tracking and GoBD-compliant invoicing built in.
             </p>
           </SectionReveal>
         </div>
@@ -152,12 +152,12 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <SectionReveal>
             <h2 className="font-heading text-3xl md:text-4xl font-semibold text-ivory leading-tight max-w-xl mx-auto">
-              Experience the AviDelux difference
+              Experience the Avidelux difference
             </h2>
           </SectionReveal>
           <SectionReveal delay={0.1}>
-            <Link to="/booking" className="inline-flex items-center gap-2 bg-bronze text-ivory px-8 py-4 font-body text-sm font-medium tracking-wide hover:bg-bronze/80 luxury-transition rounded-sm mt-8">
-              Book Your Ride
+            <Link to="/corporate" className="inline-flex items-center gap-2 bg-bronze text-ivory px-8 py-4 font-body text-sm font-medium tracking-wide hover:bg-bronze/80 luxury-transition rounded-sm mt-8">
+              Explore Corporate Solutions
               <ArrowRight size={16} />
             </Link>
           </SectionReveal>

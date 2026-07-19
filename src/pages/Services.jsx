@@ -18,16 +18,16 @@ const vehicleClasses = [
 ];
 
 const metrics = [
-  { value: "52K+", label: "Active Users", icon: Users },
-  { value: "2M+", label: "Kilometers Covered", icon: Globe },
-  { value: "200+", label: "Global Markets", icon: MapPin },
-  { value: "4.97", label: "Average Rating", icon: Award },
+  { value: "100%", label: "Licensed & Insured Partners", icon: Users },
+  { value: "7", label: "Cities Across Germany", icon: Globe },
+  { value: "60s", label: "Average Dispatch Time", icon: MapPin },
+  { value: "GoBD", label: "Compliant Invoicing", icon: Award },
 ];
 
 const services = [
   {
     title: "Airport Transfers",
-    desc: "The AviDelux airport transfer service is engineered to eliminate the friction of international travel. From the moment your flight touches down, our network synchronizes with real-time air traffic control data, ensuring your chauffeur is perfectly positioned at the arrivals terminal regardless of early landings or commercial delays. Enjoy 60 minutes of complimentary waiting time, full inclusion of airport toll fees, and a dedicated professional chauffeur who handles your luggage with absolute care, escorting you seamlessly from the arrivals gate to your pristine executive vehicle. We transform airport transit into an uninterrupted, stress-free extension of your executive day.",
+    desc: "Avidelux's airport transfer dispatch is engineered to eliminate the friction of international travel. The moment your flight touches down, our platform synchronizes with live flight-tracking data, ensuring a licensed partner chauffeur is positioned at the arrivals terminal regardless of early landings or delays. Every trip includes 60 minutes of complimentary waiting time and full inclusion of airport toll fees, with a professional partner chauffeur who handles your luggage with care, escorting you seamlessly from the arrivals gate to your vehicle.",
     icon: Car,
   },
   {
@@ -37,12 +37,12 @@ const services = [
   },
   {
     title: "Event Transport",
-    desc: "Coordinate luxury ground travel for conferences, galas, and board meetings with dedicated fleet allocation and on-site coordination.",
+    desc: "Coordinate ground travel for conferences, galas, and board meetings with dedicated partner fleet allocation and on-site dispatch coordination.",
     icon: Calendar,
   },
   {
     title: "Hourly Chauffeur",
-    desc: "Designed for dynamic schedules, high-stakes business roadshows, and multi-destination itineraries, our Hourly & As-Directed service grants you absolute logistical flexibility. Rather than booking point-to-point, you retain a dedicated premium vehicle and a certified professional chauffeur for a customized duration. Conduct confidential phone calls, review sensitive corporate presentations, or navigate dense European business districts with the peace of mind that your vehicle is permanently on standby. No destination changes require re-booking; your schedule dictates the route, billed transparently by the hour with unlimited stops.",
+    desc: "Designed for dynamic schedules, business roadshows, and multi-destination itineraries, our Hourly & As-Directed service grants you absolute logistical flexibility. Rather than booking point-to-point, you retain a dedicated partner vehicle and a certified professional chauffeur for a customized duration. No destination changes require re-booking; your schedule dictates the route, billed transparently by the hour with unlimited stops.",
     icon: Clock,
   },
 ];
@@ -58,7 +58,7 @@ export default function Services() {
     <PageTransition>
       <SEO
         title="Chauffeur Services"
-        description="Airport transfers, corporate travel, event chauffeuring, and hourly hire — discover the full range of AviDelux luxury chauffeur services."
+        description="Airport transfers, corporate travel, event coordination, and hourly hire — discover how Avidelux's dispatch platform connects you with licensed partner chauffeurs across Germany."
         path="/services"
       />
       <Navbar />
@@ -80,7 +80,7 @@ export default function Services() {
               </SectionReveal>
               <SectionReveal delay={0.2}>
                 <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-md">
-                  From airport transfers to corporate fleet management—every journey is dispatched by autonomous AI nodes for unmatched precision and luxury.
+                  From airport transfers to corporate fleet management—every trip is automatically dispatched to a licensed partner for unmatched precision and reliability.
                 </p>
               </SectionReveal>
               <SectionReveal delay={0.3}>
@@ -256,7 +256,7 @@ export default function Services() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <p className="font-body text-base text-ivory/50 mt-6 max-w-md mx-auto leading-relaxed">
-              Join 52,000+ professionals who trust AviDelux for their ground travel needs.
+              Trusted by corporate travel teams and hospitality partners across Germany.
             </p>
           </SectionReveal>
           <SectionReveal delay={0.2}>

@@ -52,8 +52,8 @@ export default function Corporate() {
   return (
     <PageTransition>
       <SEO
-        title="Corporate Chauffeur Services"
-        description="Executive chauffeur and corporate transfer solutions from AviDelux — reliable, discreet ground transportation for business travel and events."
+        title="Corporate Dispatch & Fleet Platform"
+        description="Avidelux's B2B dispatch and fleet management platform connects your corporate travel program with independently owned, licensed taxi and chauffeur partners across Germany."
         path="/corporate"
       />
       <Navbar />
@@ -75,7 +75,7 @@ export default function Corporate() {
               </SectionReveal>
               <SectionReveal delay={0.2}>
                 <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-md">
-                  Enterprise-grade luxury ground travel with autonomous AI dispatch, zero-emission reporting, and seamless integration into your corporate travel ecosystem.
+                  Enterprise-grade dispatch technology with automated routing, per-trip carbon reporting, and seamless integration into your corporate travel ecosystem.
                 </p>
               </SectionReveal>
               <SectionReveal delay={0.3}>
@@ -110,7 +110,7 @@ export default function Corporate() {
           <SectionReveal>
             <div className="mb-16">
               <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">
-                Why AviDelux
+                Why Avidelux
               </p>
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-cacao leading-tight max-w-lg">
                 Luxury ground travel perfected
@@ -193,7 +193,7 @@ export default function Corporate() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-              {["Frankfurt", "Berlin", "München", "Hamburg", "Köln", "Düsseldorf"].map(
+              {["Frankfurt", "Berlin", "München", "Hamburg", "Köln", "Düsseldorf", "Dortmund"].map(
                 (name, i) => (
                   <div
                     key={i}

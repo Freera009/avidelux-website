@@ -29,7 +29,7 @@ const packages = [
     name: "Grand Voyage",
     price: "€2,500",
     desc: "The ultimate luxury ground travel package.",
-    features: ["10 First Class rides", "Unlimited distance", "Global validity", "Priority dispatch", "Dedicated concierge", "Valid for 18 months"],
+    features: ["10 First Class rides", "Unlimited distance", "Nationwide validity", "Priority dispatch", "Dedicated account support", "Valid for 18 months"],
     popular: false,
   },
 ];
@@ -56,8 +56,8 @@ export default function GiftCards() {
   return (
     <PageTransition>
       <SEO
-        title="Gift Cards"
-        description="Give the gift of luxury travel with an AviDelux gift card, redeemable for premium chauffeur services worldwide."
+        title="Corporate Gift Cards"
+        description="Give the gift of time with an Avidelux gift card, redeemable for premium ground transport through our licensed partner network across Germany."
         path="/gift-cards"
       />
       <Navbar />
@@ -69,12 +69,12 @@ export default function GiftCards() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              The gift of time and luxury
+              The gift of time, for your clients and team
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              Digital gift cards for chauffeur services. Perfect for clients, executives, and loved ones who deserve the extraordinary.
+              Digital gift cards redeemable for premium ground transport. Perfect for clients, executives, and team members who deserve the extraordinary.
             </p>
           </SectionReveal>
         </div>
@@ -135,7 +135,7 @@ export default function GiftCards() {
                 <div className="text-center py-8">
                   <Gift size={40} className="text-bronze mx-auto mb-4" />
                   <h3 className="font-heading text-2xl font-semibold text-cacao mb-2">Request Received</h3>
-                  <p className="font-body text-sm text-cacao/50 mb-2">Our concierge team will follow up to complete the gift card purchase for {recipient.email}.</p>
+                  <p className="font-body text-sm text-cacao/50 mb-2">Our team will follow up to complete the gift card purchase for {recipient.email}.</p>
                 </div>
               ) : (
                 <form onSubmit={handleGiftCardSubmit} className="space-y-6">

@@ -21,7 +21,7 @@ export default function Logo({ size = 40, light = false, className = "" }) {
         </svg>
       </div>
       <span className={`font-heading text-xl md:text-2xl font-bold tracking-tight ${light ? "text-ivory" : "text-cacao"}`}>
-        AviDelux
+        Avidelux
       </span>
     </div>
   );

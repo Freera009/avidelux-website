@@ -12,25 +12,19 @@ import SEO from "@/components/avidelux/SEO";
 const AERIAL_IMG = "/images/c96c76a46_generated_image.png";
 
 const cities = [
-  { name: "Frankfurt", country: "Germany", coords: [50.1109, 8.6821], region: "DACH Region" },
-  { name: "Munich", country: "Germany", coords: [48.1351, 11.5820], region: "DACH Region" },
-  { name: "Zurich", country: "Switzerland", coords: [47.3769, 8.5417], region: "DACH Region" },
-  { name: "Vienna", country: "Austria", coords: [48.2082, 16.3738], region: "DACH Region" },
-  { name: "Geneva", country: "Switzerland", coords: [46.2044, 6.1432], region: "DACH Region" },
-  { name: "Paris", country: "France", coords: [48.8566, 2.3522], region: "Benelux & France" },
-  { name: "Brussels", country: "Belgium", coords: [50.8503, 4.3517], region: "Benelux & France" },
-  { name: "Amsterdam", country: "Netherlands", coords: [52.3676, 4.9041], region: "Benelux & France" },
-  { name: "Luxembourg", country: "Luxembourg", coords: [49.6116, 6.1319], region: "Benelux & France" },
-  { name: "Milan", country: "Italy", coords: [45.4642, 9.1900], region: "Southern & Eastern Europe" },
-  { name: "Rome", country: "Italy", coords: [41.9028, 12.4964], region: "Southern & Eastern Europe" },
-  { name: "Prague", country: "Czech Republic", coords: [50.0755, 14.4378], region: "Southern & Eastern Europe" },
-  { name: "Budapest", country: "Hungary", coords: [47.4979, 19.0402], region: "Southern & Eastern Europe" },
+  { name: "Frankfurt", country: "Germany", coords: [50.1109, 8.6821], region: "Central & Southern Germany" },
+  { name: "Munich", country: "Germany", coords: [48.1351, 11.5820], region: "Central & Southern Germany" },
+  { name: "Berlin", country: "Germany", coords: [52.5200, 13.4050], region: "Northern & Eastern Germany" },
+  { name: "Hamburg", country: "Germany", coords: [53.5511, 9.9937], region: "Northern & Eastern Germany" },
+  { name: "Cologne", country: "Germany", coords: [50.9375, 6.9603], region: "Rhine-Ruhr" },
+  { name: "Düsseldorf", country: "Germany", coords: [51.2277, 6.7735], region: "Rhine-Ruhr" },
+  { name: "Dortmund", country: "Germany", coords: [51.5136, 7.4653], region: "Rhine-Ruhr" },
 ];
 
 const regions = [
-  { name: "DACH Region", count: "5 cities", desc: "Frankfurt, Munich, Zurich, Vienna, and Geneva." },
-  { name: "Benelux & France", count: "4 cities", desc: "Paris, Brussels, Amsterdam, and Luxembourg." },
-  { name: "Southern & Eastern Europe", count: "4 cities", desc: "Milan, Rome, Prague, and Budapest." },
+  { name: "Rhine-Ruhr", count: "3 cities", desc: "Cologne, Düsseldorf, and Dortmund." },
+  { name: "Central & Southern Germany", count: "2 cities", desc: "Frankfurt and Munich." },
+  { name: "Northern & Eastern Germany", count: "2 cities", desc: "Berlin and Hamburg." },
 ];
 
 export default function ServiceAreas() {
@@ -38,7 +32,7 @@ export default function ServiceAreas() {
     <PageTransition>
       <SEO
         title="Service Areas"
-        description="AviDelux provides premium chauffeur coverage across Europe's principal business hubs — explore our DACH, Benelux & France, and Southern & Eastern Europe network."
+        description="Avidelux's partner network provides dispatch coverage across Germany's principal business hubs — explore our Rhine-Ruhr, Central & Southern, and Northern & Eastern Germany coverage."
         path="/service-areas"
       />
       <Navbar />
@@ -50,12 +44,12 @@ export default function ServiceAreas() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              Our Global Footprint: Principal Business Hubs
+              Our Coverage: Germany's Principal Business Hubs
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.2}>
             <p className="font-body text-base text-cacao/50 mt-8 leading-relaxed max-w-xl">
-              AviDelux operates across Europe's primary financial capitals, diplomatic centers, and luxury destinations through a highly vetted, unified local network. From airport transfers at major international hubs to cross-border intercity transit, we ensure identical premium standards everywhere.
+              Avidelux dispatches trips across Germany's principal business hubs through a highly vetted, unified network of licensed local partners. From airport transfers at major hubs to intercity transit, we ensure identical standards everywhere.
             </p>
           </SectionReveal>
         </div>
@@ -67,8 +61,8 @@ export default function ServiceAreas() {
           <SectionReveal>
             <div className="rounded-sm overflow-hidden border border-cacao/10 h-[50vh] lg:h-[60vh]">
               <MapContainer
-                center={[49, 10]}
-                zoom={4}
+                center={[51, 9]}
+                zoom={6}
                 scrollWheelZoom={true}
                 style={{ height: "100%", width: "100%", background: "#0a0a0a" }}
                 attributionControl={false}
@@ -103,7 +97,7 @@ export default function ServiceAreas() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <SectionReveal>
             <div className="mb-16">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">Global Presence</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-4">Germany-Wide Presence</p>
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-cacao leading-tight max-w-lg">
                 Regional breakdown
               </h2>

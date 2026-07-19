@@ -13,7 +13,7 @@ const contactInfo = [
   { icon: Mail, label: "Email", value: "info@avidelux.com", href: "mailto:info@avidelux.com" },
   { icon: Phone, label: "Phone", value: "+49 152 2400 1111", href: "tel:+4915224001111" },
   { icon: MapPin, label: "Office", value: "Im Beckerfelde 8, 45475 Mülheim an der Ruhr, Germany", href: null },
-  { icon: Clock, label: "Hours", value: "24/7 Global Concierge", href: null },
+  { icon: Clock, label: "Hours", value: "24/7 Support", href: null },
 ];
 
 export default function Contact() {
@@ -36,7 +36,7 @@ export default function Contact() {
     <PageTransition>
       <SEO
         title="Contact Us"
-        description="Get in touch with AviDelux's 24/7 concierge team by phone, email, or WhatsApp for bookings, questions, or corporate accounts."
+        description="Get in touch with Avidelux's team by phone, email, or WhatsApp for ride requests, questions, or corporate accounts."
         path="/contact"
       />
       <Navbar />
@@ -48,7 +48,7 @@ export default function Contact() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-cacao leading-[1.08] max-w-3xl">
-              Your personal concierge, always available
+              We're here to help, day or night
             </h1>
           </SectionReveal>
         </div>
@@ -60,7 +60,7 @@ export default function Contact() {
             {/* Contact Info */}
             <SectionReveal>
               <div className="rounded-sm overflow-hidden mb-10">
-                <img src={RECEPTION_IMG} alt="AviDelux luxury reception desk" className="w-full h-48 lg:h-64 object-cover" />
+                <img src={RECEPTION_IMG} alt="Avidelux office reception desk" className="w-full h-48 lg:h-64 object-cover" />
               </div>
               <div className="space-y-8">
                 {contactInfo.map((info, i) => (
@@ -88,7 +88,7 @@ export default function Contact() {
                   <div className="text-center py-12">
                     <CheckCircle size={40} className="text-bronze mx-auto mb-4" />
                     <h3 className="font-heading text-xl font-semibold text-cacao mb-2">Message Sent</h3>
-                    <p className="font-body text-sm text-cacao/50 mb-6">Our concierge team will respond within 2 hours.</p>
+                    <p className="font-body text-sm text-cacao/50 mb-6">Our team will respond within 2 hours.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleContactSubmit} className="space-y-6">

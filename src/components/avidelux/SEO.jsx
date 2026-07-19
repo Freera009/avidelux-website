@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
-const SITE_NAME = "AviDelux";
+const SITE_NAME = "Avidelux";
 const SITE_URL = "https://avidelux.com";
 const DEFAULT_IMAGE = `${SITE_URL}/images/f02e2c51b_generated_f64341c9.png`;
 const DEFAULT_DESCRIPTION =
-  "AviDelux offers premium chauffeur services and luxury vehicle transfers with a professional, discreet, and reliable fleet available worldwide.";
+  "Avidelux is the B2B technology platform for automated dispatch, GPS tracking, and GoBD-compliant invoicing — connecting independently owned, licensed taxi and chauffeur companies across Germany under one system.";
 
 function setMetaTag(attr, key, content) {
   if (!content) return;
@@ -54,7 +54,7 @@ export default function SEO({
   useEffect(() => {
     const fullTitle = title
       ? `${title} | ${SITE_NAME}`
-      : `${SITE_NAME} — Premium Chauffeur Service & Luxury Transfers`;
+      : `${SITE_NAME} — B2B Dispatch & Fleet Management Platform`;
     const canonicalUrl = `${SITE_URL}${path === "/" ? "" : path}`;
 
     document.title = fullTitle;
