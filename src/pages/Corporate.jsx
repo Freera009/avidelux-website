@@ -188,7 +188,7 @@ export default function Corporate() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
           <SectionReveal>
             <p className="font-body text-xs tracking-[0.3em] uppercase text-bronze mb-12">
-              Live across Germany, expanding city by city
+              Live across the EU, expanding city by city
             </p>
           </SectionReveal>
           <SectionReveal delay={0.1}>

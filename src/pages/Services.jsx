@@ -256,7 +256,7 @@ export default function Services() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <p className="font-body text-base text-ivory/50 mt-6 max-w-md mx-auto leading-relaxed">
-              Trusted by corporate travel teams and hospitality partners across Germany.
+              Trusted by corporate travel teams and hospitality partners across the EU.
             </p>
           </SectionReveal>
           <SectionReveal delay={0.2}>
