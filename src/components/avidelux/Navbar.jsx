@@ -21,6 +21,7 @@ const moreLinks = [
   { label: "Gift Cards", path: "/gift-cards" },
   { label: "Careers", path: "/careers" },
   { label: "Events & Tours", path: "/events" },
+  { label: "Join the Network", path: "/partners" },
   { label: "Privacy Policy", path: "/privacy-policy" },
   { label: "Imprint", path: "/imprint" },
   { label: "Terms & Conditions", path: "/terms" },

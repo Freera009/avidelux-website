@@ -23,6 +23,7 @@ import Membership from './pages/Membership';
 import GiftCards from './pages/GiftCards';
 import Careers from './pages/Careers';
 import Events from './pages/Events';
+import Partners from './pages/Partners';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -67,6 +68,7 @@ const AuthenticatedApp = () => {
       <Route path="/gift-cards" element={<GiftCards />} />
       <Route path="/careers" element={<Careers />} />
       <Route path="/events" element={<Events />} />
+      <Route path="/partners" element={<Partners />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
