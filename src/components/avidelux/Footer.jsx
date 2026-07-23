@@ -12,6 +12,7 @@ const footerSections = [
     links: [
       { label: "Our Heritage", path: "/about" },
       { label: "Careers", path: "/careers" },
+      { label: "Join the Network", path: "/partners" },
       { label: "Inquiries & Bespoke Requests", path: "/contact" },
       { label: "Client Journals / Executive Reviews", path: "/testimonials" },
     ],
