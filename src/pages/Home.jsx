@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <PageTransition>
       <SEO
-        description="Avidelux is the automated dispatch and fleet management platform connecting independently owned, licensed taxi and chauffeur companies across Germany — one system for booking, GPS tracking, and GoBD-compliant invoicing."
+        description="Avidelux is the automated dispatch and fleet management platform connecting independently owned, licensed premium chauffeur and ground transport companies across the EU — one system for booking, GPS tracking, and GoBD-compliant invoicing."
         path="/"
       />
       <Navbar />

@@ -55,7 +55,7 @@ export default function Careers() {
     <PageTransition>
       <SEO
         title="Careers"
-        description="Explore opportunities to join Avidelux's licensed partner network across Germany, dedicated to premium ground transport and luxury hospitality."
+        description="Explore opportunities to join Avidelux's licensed partner network across the EU, dedicated to premium ground transport and luxury hospitality."
         path="/careers"
       />
       <Navbar />

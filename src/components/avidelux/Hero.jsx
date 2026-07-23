@@ -307,7 +307,7 @@ export default function Hero() {
           </h1>
           <p className="hero-subtitle">Next-Generation AI-Powered Dispatch & Fleet Analytics</p>
           <p className="hero-desc">
-            Automated dispatch technology connecting licensed, independently owned partner fleets across Germany, with sixty-second average dispatch times.
+            Automated dispatch technology connecting licensed, independently owned premium partner fleets across the EU, with sixty-second average dispatch times.
           </p>
 
           <div className="tech-grid">

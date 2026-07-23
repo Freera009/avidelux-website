@@ -4,7 +4,7 @@ const SITE_NAME = "Avidelux";
 const SITE_URL = "https://avidelux.com";
 const DEFAULT_IMAGE = `${SITE_URL}/images/f02e2c51b_generated_f64341c9.png`;
 const DEFAULT_DESCRIPTION =
-  "Avidelux is the B2B technology platform for automated dispatch, GPS tracking, and GoBD-compliant invoicing — connecting independently owned, licensed taxi and chauffeur companies across Germany under one system.";
+  "Avidelux is the B2B technology platform for automated dispatch, GPS tracking, and GoBD-compliant invoicing — connecting independently owned, licensed premium chauffeur and ground transport companies across the EU under one system.";
 
 function setMetaTag(attr, key, content) {
   if (!content) return;

@@ -53,7 +53,7 @@ export default function Corporate() {
     <PageTransition>
       <SEO
         title="Corporate Dispatch & Fleet Platform"
-        description="Avidelux's B2B dispatch and fleet management platform connects your corporate travel program with independently owned, licensed taxi and chauffeur partners across Germany."
+        description="Avidelux's B2B dispatch and fleet management platform connects your corporate travel program with independently owned, licensed premium chauffeur and ground transport partners across the EU."
         path="/corporate"
       />
       <Navbar />

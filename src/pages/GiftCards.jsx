@@ -57,7 +57,7 @@ export default function GiftCards() {
     <PageTransition>
       <SEO
         title="Corporate Gift Cards"
-        description="Give the gift of time with an Avidelux gift card, redeemable for premium ground transport through our licensed partner network across Germany."
+        description="Give the gift of time with an Avidelux gift card, redeemable for premium ground transport through our licensed partner network across the EU."
         path="/gift-cards"
       />
       <Navbar />

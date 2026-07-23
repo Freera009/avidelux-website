@@ -19,7 +19,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2019", title: "The Vision", desc: "Founded in Germany with a radical idea: automated dispatch technology for independently owned taxi and chauffeur companies, replacing manual call-center coordination." },
+  { year: "2019", title: "The Vision", desc: "Founded in Germany with a radical idea: automated dispatch technology for independently owned premium chauffeur companies, replacing manual call-center coordination." },
   { year: "2021", title: "Emissions Reporting", desc: "Introduced per-trip Scope 3 carbon reporting, now used by partners and corporate clients for CSRD compliance." },
   { year: "2023", title: "Germany-Wide Growth", desc: "Expanded partner coverage across major German business hubs, from Frankfurt to Berlin." },
   { year: "2026", title: "Platform Maturity", desc: "Refined automated dispatch to deliver sixty-second average response times for partner-fulfilled trips." },
@@ -30,7 +30,7 @@ export default function About() {
     <PageTransition>
       <SEO
         title="About Avidelux"
-        description="Learn how Avidelux's dispatch and fleet management platform connects independently owned, licensed taxi and chauffeur companies across Germany under one automated, GoBD-compliant system."
+        description="Learn how Avidelux's dispatch and fleet management platform connects independently owned, licensed premium chauffeur and ground transport companies across the EU under one automated, GoBD-compliant system."
         path="/about"
       />
       <Navbar />

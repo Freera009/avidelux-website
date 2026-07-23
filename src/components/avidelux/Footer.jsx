@@ -57,7 +57,7 @@ export default function Footer() {
               <div>
                 <Logo size={36} light />
                 <p className="font-body text-sm text-ivory/50 mt-4 leading-relaxed">
-                  The automated dispatch and fleet management platform for independently owned, licensed taxi and chauffeur companies across Germany.
+                  The automated dispatch and fleet management platform for independently owned, licensed premium chauffeur and ground transport companies across the EU.
                 </p>
               </div>
 

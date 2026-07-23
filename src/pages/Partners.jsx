@@ -54,7 +54,7 @@ export default function Partners() {
     <PageTransition>
       <SEO
         title="Join the Network"
-        description="Apply to join the Avidelux partner network as a licensed taxi or chauffeur fleet operator, or as a booking platform sending trips into our dispatch system."
+        description="Apply to join the Avidelux partner network as a licensed premium chauffeur fleet operator, or as a booking platform sending trips into our dispatch system."
         path="/partners"
       />
       <Navbar />
@@ -98,7 +98,7 @@ export default function Partners() {
                       >
                         <div className="font-body text-sm font-semibold text-cacao">Provider</div>
                         <div className="font-body text-xs text-cacao/50 mt-1">
-                          Taxi / fleet company — receive bookings
+                          Premium chauffeur / fleet company — receive bookings
                         </div>
                       </button>
                       <button

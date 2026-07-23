@@ -58,7 +58,7 @@ export default function Services() {
     <PageTransition>
       <SEO
         title="Chauffeur Services"
-        description="Airport transfers, corporate travel, event coordination, and hourly hire — discover how Avidelux's dispatch platform connects you with licensed partner chauffeurs across Germany."
+        description="Airport transfers, corporate travel, event coordination, and hourly hire — discover how Avidelux's dispatch platform connects you with licensed premium partner chauffeurs across the EU."
         path="/services"
       />
       <Navbar />
